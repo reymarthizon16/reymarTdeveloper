@@ -1,0 +1,1 @@
+<?php echo $this->element('/account_transactions/customerTransactionBody',array('accTkey'=>$accTkey,'accTvalue'=>$accTvalue,'branches'=>$branches)); ?>

@@ -1,0 +1,5098 @@
+2018-12-28 12:36:37 Serial_no: Array
+(
+)
+
+2018-12-28 12:36:43 Serial_no: Array
+(
+    [0] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 3
+                    [status] => 1
+                    [serial_no] => 80768402
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:51:58
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768402
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:51:58
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [1] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 10
+                    [status] => 1
+                    [serial_no] => 80768105
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:56:19
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768105
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:56:19
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 11
+                    [status] => 1
+                    [serial_no] => 80768134
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:31:01
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768134
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:56:28
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [3] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 16
+                    [status] => 1
+                    [serial_no] => 80768406
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:43:43
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768406
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 02:58:27
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [4] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 24
+                    [status] => 1
+                    [serial_no] => 80768132
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:46:10
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768132
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 03:00:23
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [5] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 41
+                    [status] => 1
+                    [serial_no] => 80768130
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:31:03
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80768130
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 
+                    [receiving_report_no] => 38519
+                    [receiving_datetime] => 2018-09-01 01:53:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-17 03:09:40
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [6] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 52
+                    [status] => 1
+                    [serial_no] => 80874470
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-19 05:42:09
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80874470
+                    [model_id] => 7
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2102
+                    [receiving_report_no] => 38523
+                    [receiving_datetime] => 2018-09-06 02:41:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-19 05:42:09
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [7] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 73
+                    [status] => 1
+                    [serial_no] => 80853791
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-19 06:22:38
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80853791
+                    [model_id] => 8
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2102
+                    [receiving_report_no] => 38523
+                    [receiving_datetime] => 2018-09-06 06:18:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5700.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-09-19 06:22:38
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [8] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 105
+                    [status] => 1
+                    [serial_no] => 812987710
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:34:09
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 812987710
+                    [model_id] => 2
+                    [type_id] => 14
+                    [brand_id] => 19
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 167263
+                    [receiving_report_no] => 38545
+                    [receiving_datetime] => 2018-09-29 16:03:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 13577.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:04:38
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [9] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 164
+                    [status] => 1
+                    [serial_no] => 80617510
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:31:04
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80617510
+                    [model_id] => 32
+                    [type_id] => 16
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38538
+                    [receiving_datetime] => 2018-09-24 16:22:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 8500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:20:21
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [10] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 178
+                    [status] => 1
+                    [serial_no] => 80617228
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:39:41
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80617228
+                    [model_id] => 32
+                    [type_id] => 16
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38538
+                    [receiving_datetime] => 2018-09-24 16:22:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 8500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:20:52
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [11] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 181
+                    [status] => 1
+                    [serial_no] => 80617495
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:39:43
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80617495
+                    [model_id] => 32
+                    [type_id] => 16
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38538
+                    [receiving_datetime] => 2018-09-24 16:22:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 8500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:21:00
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [12] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 200
+                    [status] => 1
+                    [serial_no] => B2668
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:39:44
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => B2668
+                    [model_id] => 31
+                    [type_id] => 16
+                    [brand_id] => 26
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38537
+                    [receiving_datetime] => 2018-09-24 16:14:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:22:18
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [13] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 207
+                    [status] => 1
+                    [serial_no] => 80878141
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:25:49
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80878141
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38542
+                    [receiving_datetime] => 2018-09-24 15:16:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:26:14
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [14] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 213
+                    [status] => 1
+                    [serial_no] => 80876462
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:25:47
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80876462
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38542
+                    [receiving_datetime] => 2018-09-24 15:16:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:26:26
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [15] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 231
+                    [status] => 1
+                    [serial_no] => B9956
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:31:05
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => B9956
+                    [model_id] => 29
+                    [type_id] => 16
+                    [brand_id] => 26
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38536
+                    [receiving_datetime] => 2018-09-24 15:16:00
+                    [source_account_id] => 10
+                    [srp_price] => 
+                    [net_price] => 7200.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:39:24
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [16] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 258
+                    [status] => 1
+                    [serial_no] => 80853261
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:32:31
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80853261
+                    [model_id] => 8
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38541
+                    [receiving_datetime] => 2018-09-24 15:05:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 6200.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:32:13
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [17] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 284
+                    [status] => 1
+                    [serial_no] => 18001696
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:25:52
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001696
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:25
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [18] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 286
+                    [status] => 1
+                    [serial_no] => 18001800
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:25:50
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001800
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:31
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [19] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 288
+                    [status] => 1
+                    [serial_no] => 18001679
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:35
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001679
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:35
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [20] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 289
+                    [status] => 1
+                    [serial_no] => 18001768
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:36
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001768
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:36
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [21] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 290
+                    [status] => 1
+                    [serial_no] => 18001660
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:41
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001660
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:41
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [22] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 291
+                    [status] => 1
+                    [serial_no] => 18001583
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:46:11
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001583
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:43
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [23] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 354
+                    [status] => 1
+                    [serial_no] => 80983995
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:26:53
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80983995
+                    [model_id] => 7
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2106
+                    [receiving_report_no] => 38550
+                    [receiving_datetime] => 2018-10-02 16:12:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-19 16:17:52
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [24] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 359
+                    [status] => 1
+                    [serial_no] => 80984106
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:32:33
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80984106
+                    [model_id] => 7
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2106
+                    [receiving_report_no] => 38550
+                    [receiving_datetime] => 2018-10-02 16:12:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-19 16:18:05
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [25] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 365
+                    [status] => 1
+                    [serial_no] => 08554
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:32:34
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 08554
+                    [model_id] => 50
+                    [type_id] => 16
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 56944
+                    [receiving_report_no] => 38655
+                    [receiving_datetime] => 2018-10-12 11:06:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 8.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:11:28
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [26] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 400
+                    [status] => 1
+                    [serial_no] => 103312
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:32:37
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 103312
+                    [model_id] => 61
+                    [type_id] => 19
+                    [brand_id] => 20
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 57282
+                    [receiving_report_no] => 38659
+                    [receiving_datetime] => 2018-10-12 11:32:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 0.01
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:35:16
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [27] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 401
+                    [status] => 1
+                    [serial_no] => 103716
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:40:43
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 103716
+                    [model_id] => 61
+                    [type_id] => 19
+                    [brand_id] => 20
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 57282
+                    [receiving_report_no] => 38659
+                    [receiving_datetime] => 2018-10-12 11:32:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 0.01
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:35:19
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [28] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 402
+                    [status] => 1
+                    [serial_no] => 108033
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:40:44
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 108033
+                    [model_id] => 61
+                    [type_id] => 19
+                    [brand_id] => 20
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 57282
+                    [receiving_report_no] => 38659
+                    [receiving_datetime] => 2018-10-12 11:32:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 0.01
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:35:20
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [29] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 403
+                    [status] => 1
+                    [serial_no] => 103660
+                    [branch_id] => 7
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 09:32:36
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 7
+                    [code] => GM
+                    [name] => GRACE MARKETING
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 103660
+                    [model_id] => 61
+                    [type_id] => 19
+                    [brand_id] => 20
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 57282
+                    [receiving_report_no] => 38659
+                    [receiving_datetime] => 2018-10-12 11:32:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 0.01
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:35:23
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+)
+
+2018-12-28 12:36:48 Serial_no: Array
+(
+    [0] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 133
+                    [status] => 1
+                    [serial_no] => 48AV09291807
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:19:02
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 48AV09291807
+                    [model_id] => 36
+                    [type_id] => 28
+                    [brand_id] => 31
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 386
+                    [receiving_report_no] => 38548
+                    [receiving_datetime] => 2018-09-29 13:52:00
+                    [source_account_id] => 10
+                    [srp_price] => 
+                    [net_price] => 5200.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:17:46
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [1] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 175
+                    [status] => 1
+                    [serial_no] => 80617613
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:17:58
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80617613
+                    [model_id] => 32
+                    [type_id] => 16
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38538
+                    [receiving_datetime] => 2018-09-24 16:22:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 8500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:20:45
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [2] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 204
+                    [status] => 1
+                    [serial_no] => B3541
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:13:34
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => B3541
+                    [model_id] => 31
+                    [type_id] => 16
+                    [brand_id] => 26
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 43454
+                    [receiving_report_no] => 38537
+                    [receiving_datetime] => 2018-09-24 16:14:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5500.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 14:22:26
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [3] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 295
+                    [status] => 1
+                    [serial_no] => 18001622
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:51
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18001622
+                    [model_id] => 28
+                    [type_id] => 32
+                    [brand_id] => 34
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38535
+                    [receiving_datetime] => 2018-09-22 15:48:00
+                    [source_account_id] => 5
+                    [srp_price] => 
+                    [net_price] => 2100.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:34:51
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [4] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 296
+                    [status] => 1
+                    [serial_no] => 2518-0286564
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 14:26:18
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 2518-0286564
+                    [model_id] => 27
+                    [type_id] => 18
+                    [brand_id] => 27
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 167034
+                    [receiving_report_no] => 38534
+                    [receiving_datetime] => 2018-09-21 15:25:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 9890.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:35:05
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [5] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 309
+                    [status] => 1
+                    [serial_no] => 890437619
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:06:21
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 890437619
+                    [model_id] => 23
+                    [type_id] => 13
+                    [brand_id] => 19
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 167032
+                    [receiving_report_no] => 38532
+                    [receiving_datetime] => 2018-09-21 15:13:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 6709.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-12 15:36:06
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [6] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 364
+                    [status] => 1
+                    [serial_no] => 08521
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:13:36
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 08521
+                    [model_id] => 50
+                    [type_id] => 16
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 56944
+                    [receiving_report_no] => 38655
+                    [receiving_datetime] => 2018-10-12 11:06:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 8.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:11:23
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [7] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 375
+                    [status] => 1
+                    [serial_no] => 007
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 14:22:24
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 007
+                    [model_id] => 53
+                    [type_id] => 14
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 56944
+                    [receiving_report_no] => 38656
+                    [receiving_datetime] => 2018-10-12 11:12:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 19.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:17:52
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [8] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 388
+                    [status] => 1
+                    [serial_no] => 2222
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:08:09
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 2222
+                    [model_id] => 56
+                    [type_id] => 18
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 56946
+                    [receiving_report_no] => 38657
+                    [receiving_datetime] => 2018-10-12 11:23:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 9990.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:25:47
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [9] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 424
+                    [status] => 1
+                    [serial_no] => 851193744
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:52
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 851193744
+                    [model_id] => 2
+                    [type_id] => 14
+                    [brand_id] => 19
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171046
+                    [receiving_report_no] => 38665
+                    [receiving_datetime] => 2018-10-19 11:49:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 13577.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-22 11:55:27
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [10] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 430
+                    [status] => 1
+                    [serial_no] => 80853810
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 14:28:53
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80853810
+                    [model_id] => 8
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 2105
+                    [receiving_report_no] => 38534
+                    [receiving_datetime] => 2018-09-22 09:19:00
+                    [source_account_id] => 12
+                    [srp_price] => 
+                    [net_price] => 5700.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-24 09:21:47
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [11] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 450
+                    [status] => 1
+                    [serial_no] => 189510774
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-14 14:28:48
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 189510774
+                    [model_id] => 26
+                    [type_id] => 14
+                    [brand_id] => 21
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171048
+                    [receiving_report_no] => 38667
+                    [receiving_datetime] => 2018-10-19 11:28:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 19690.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-10-24 11:39:53
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [12] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 562
+                    [status] => 1
+                    [serial_no] => 801567407
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:24:00
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 801567407
+                    [model_id] => 1
+                    [type_id] => 14
+                    [brand_id] => 19
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171353
+                    [receiving_report_no] => 38675
+                    [receiving_datetime] => 2018-11-03 14:12:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 12253.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-20 14:17:35
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [13] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 608
+                    [status] => 1
+                    [serial_no] => 218022768
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:36
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 218022768
+                    [model_id] => 106
+                    [type_id] => 44
+                    [brand_id] => 22
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38682
+                    [receiving_datetime] => 2018-11-08 16:06:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 4650.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-20 16:30:05
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [14] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 617
+                    [status] => 1
+                    [serial_no] => 18015355
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:55
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18015355
+                    [model_id] => 108
+                    [type_id] => 44
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38683
+                    [receiving_datetime] => 2018-11-08 14:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 4650.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 14:51:02
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [15] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 642
+                    [status] => 1
+                    [serial_no] => 18079836
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:57
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 18079836
+                    [model_id] => 109
+                    [type_id] => 13
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38684
+                    [receiving_datetime] => 2018-11-08 14:53:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 2750.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:17:55
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [16] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 654
+                    [status] => 1
+                    [serial_no] => 11-0001
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:40
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 11-0001
+                    [model_id] => 87
+                    [type_id] => 19
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:33:36
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [17] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 655
+                    [status] => 1
+                    [serial_no] => 11-0002
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:42
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 11-0002
+                    [model_id] => 87
+                    [type_id] => 19
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:33:38
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [18] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 656
+                    [status] => 1
+                    [serial_no] => 11-0003
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:43
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 11-0003
+                    [model_id] => 87
+                    [type_id] => 19
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:33:40
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [19] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 669
+                    [status] => 1
+                    [serial_no] => 11-0016
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:45
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 11-0016
+                    [model_id] => 87
+                    [type_id] => 19
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:34:04
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [20] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 674
+                    [status] => 1
+                    [serial_no] => 11-0021
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:46
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 11-0021
+                    [model_id] => 87
+                    [type_id] => 19
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:34:11
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [21] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 684
+                    [status] => 1
+                    [serial_no] => ESF11-0001
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-12 11:39:20
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => ESF11-0001
+                    [model_id] => 111
+                    [type_id] => 45
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:39:59
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [22] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 687
+                    [status] => 1
+                    [serial_no] => ESF11-0004
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:49
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => ESF11-0004
+                    [model_id] => 111
+                    [type_id] => 45
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:40:06
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [23] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 688
+                    [status] => 1
+                    [serial_no] => ESF11-0005
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:15:47
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => ESF11-0005
+                    [model_id] => 111
+                    [type_id] => 45
+                    [brand_id] => 18
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 7319096
+                    [receiving_report_no] => 38685
+                    [receiving_datetime] => 2018-11-08 15:19:00
+                    [source_account_id] => 4
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:40:10
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [24] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 699
+                    [status] => 1
+                    [serial_no] => 80877091
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:13:39
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80877091
+                    [model_id] => 7
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 14077
+                    [receiving_report_no] => 38686
+                    [receiving_datetime] => 2018-11-09 15:41:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:52:06
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [25] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 700
+                    [status] => 1
+                    [serial_no] => 80877153
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:51:37
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 80877153
+                    [model_id] => 7
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 14077
+                    [receiving_report_no] => 38686
+                    [receiving_datetime] => 2018-11-09 15:41:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 5000.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 15:52:08
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [26] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 717
+                    [status] => 1
+                    [serial_no] => 81081689
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:54
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 81081689
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 14077
+                    [receiving_report_no] => 38687
+                    [receiving_datetime] => 2018-11-09 15:52:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 2700.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 16:05:13
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [27] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 732
+                    [status] => 1
+                    [serial_no] => 81061748
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:53
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 81061748
+                    [model_id] => 6
+                    [type_id] => 13
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 14077
+                    [receiving_report_no] => 38687
+                    [receiving_datetime] => 2018-11-09 15:52:00
+                    [source_account_id] => 2
+                    [srp_price] => 
+                    [net_price] => 2700.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 16:05:56
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [28] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 772
+                    [status] => 1
+                    [serial_no] => B11026
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:51:38
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => B11026
+                    [model_id] => 29
+                    [type_id] => 16
+                    [brand_id] => 26
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171847
+                    [receiving_report_no] => 38694
+                    [receiving_datetime] => 2018-11-19 16:29:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 6800.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 16:37:55
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [29] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 781
+                    [status] => 1
+                    [serial_no] => B11428
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:18:02
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => B11428
+                    [model_id] => 29
+                    [type_id] => 16
+                    [brand_id] => 26
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171847
+                    [receiving_report_no] => 38694
+                    [receiving_datetime] => 2018-11-19 16:29:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 6800.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 16:38:15
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [30] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 790
+                    [status] => 1
+                    [serial_no] => 806719584
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:51:42
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 806719584
+                    [model_id] => 95
+                    [type_id] => 16
+                    [brand_id] => 25
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171847
+                    [receiving_report_no] => 38695
+                    [receiving_datetime] => 2018-11-19 16:38:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 12700.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-21 16:42:12
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [31] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 805
+                    [status] => 1
+                    [serial_no] => 8O2312138
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:51:40
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 8O2312138
+                    [model_id] => 5
+                    [type_id] => 14
+                    [brand_id] => 19
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 171852
+                    [receiving_report_no] => 38697
+                    [receiving_datetime] => 2018-11-17 13:55:00
+                    [source_account_id] => 1
+                    [srp_price] => 
+                    [net_price] => 14242.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-22 14:05:42
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [32] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 854
+                    [status] => 1
+                    [serial_no] => 2M040
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:20:58
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 2M040
+                    [model_id] => 52
+                    [type_id] => 14
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 57412
+                    [receiving_report_no] => 38856
+                    [receiving_datetime] => 2018-11-23 10:31:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 18995.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-26 10:37:32
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [33] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 861
+                    [status] => 1
+                    [serial_no] => IF228
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:21:03
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => IF228
+                    [model_id] => 115
+                    [type_id] => 16
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 58509
+                    [receiving_report_no] => 38857
+                    [receiving_datetime] => 2018-11-23 10:37:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 14990.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-26 10:43:49
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [34] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 868
+                    [status] => 1
+                    [serial_no] => IF229
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 10:24:07
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => IF229
+                    [model_id] => 115
+                    [type_id] => 16
+                    [brand_id] => 23
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 58509
+                    [receiving_report_no] => 38857
+                    [receiving_datetime] => 2018-11-23 10:37:00
+                    [source_account_id] => 3
+                    [srp_price] => 
+                    [net_price] => 14990.00
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-26 10:44:02
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+    [35] => Array
+        (
+            [Storage] => Array
+                (
+                    [id] => 897
+                    [status] => 1
+                    [serial_no] => 60CD11031801
+                    [branch_id] => 8
+                    [enabled] => 1
+                    [entry_datetime] => 2018-12-11 09:19:53
+                    [user_id] => 
+                    [secondary_status] => 
+                )
+
+            [Branch] => Array
+                (
+                    [id] => 8
+                    [code] => TL
+                    [name] => TALAVERA
+                    [enabled] => 1
+                    [entry_datetime] => 
+                    [user_id] => 
+                )
+
+            [User] => Array
+                (
+                    [id] => 
+                    [username] => 
+                    [password] => 
+                    [first_name] => 
+                    [last_name] => 
+                    [role] => 
+                    [branch_id] => 
+                    [position] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [enabled] => 
+                    [entry_datetime] => 
+                    [user_id] => 
+                    [name] => 
+                )
+
+            [Item] => Array
+                (
+                    [serial_no] => 60CD11031801
+                    [model_id] => 98
+                    [type_id] => 26
+                    [brand_id] => 31
+                    [status] => 1
+                    [quantity] => 1
+                    [reference_no] => 776
+                    [receiving_report_no] => 38677
+                    [receiving_datetime] => 2018-11-03 14:33:00
+                    [source_account_id] => 9
+                    [srp_price] => 
+                    [net_price] => 
+                    [sold_price] => 
+                    [down_payment_price] => 
+                    [delivery_receipt_no] => 
+                    [delivery_datetime] => 
+                    [owner_account_id] => 
+                    [sold_by_user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 2018-11-27 15:27:05
+                    [user_id] => 
+                    [repair_on_account_id] => 
+                    [repair_datetime] => 
+                    [is_repair] => 0
+                    [secondary_status] => 
+                    [old_serial_no] => 
+                    [new_serial_no] => 
+                    [is_replaced] => 0
+                    [started_branch_id] => 
+                )
+
+        )
+
+)
+
+2018-12-28 12:36:52 Serial_no: Array
+(
+)
+

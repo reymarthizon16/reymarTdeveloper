@@ -1,0 +1,180 @@
+2018-12-28 12:29:39 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count(1) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '4'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:30:26 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count(1) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '4'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:34:15 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(a.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '4'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:35:03 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '4'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:35:43 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '4'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:35:48 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '6'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:35:55 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '7'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:35:58 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '8'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:36:02 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '9'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:36:05 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '10'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:36:08 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '11'
+			group by model_id,collection_type_id
+		)Reports
+			
+2018-12-28 12:36:11 Error: 			
+		select * from (
+			select 
+				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+			from 
+				sold_transaction_details a 
+			    join sold_transactions b on a.sold_transaction_id = b.id
+			    join items c on c.serial_no = a.serial_no
+			    join models d on d.id = c.model_id
+			where
+				b.cancel = 0 and b.delivery_datetime >= '2017-12-28 00:00:00' and b.delivery_datetime <= '2018-12-28 23:59:59'
+				and a.from_branch_id = '1'
+			group by model_id,collection_type_id
+		)Reports
+			

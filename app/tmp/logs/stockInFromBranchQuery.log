@@ -1,0 +1,176 @@
+2018-12-28 12:30:26 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count(1) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '4'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:34:15 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count(1) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '4'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:35:03 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count(1) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '4'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:35:43 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '4'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:35:48 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '6'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:35:55 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '7'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:35:58 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '8'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:36:02 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '9'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:36:05 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '10'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:36:08 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '11'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		
+2018-12-28 12:36:11 StockInFromBranchQuery: 
+		select * from (
+			select 
+				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+			 from 
+				receiving_transaction_details a 
+				join receiving_transactions aa on a.receiving_transaction_id = aa.id
+				join items b on a.serial_no = b.serial_no 
+				join models c on c.id = b.model_id 
+				join branches d on d.id = a.to_branch_id
+			where 
+				a.confirmed = 1 and a.to_branch_id = '1'
+				and aa.type = 2 and aa.receiving_datetime >= '2017-12-28 00:00:00' and aa.receiving_datetime <= '2018-12-28 23:59:59'
+			group by b.model_id,a.from_branch_id
+		)Reports
+		

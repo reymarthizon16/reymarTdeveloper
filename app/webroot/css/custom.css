@@ -1,0 +1,45 @@
+/*
+body{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+a{
+	color: #fff;
+}
+.navbar-default{
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+
+}
+
+.navbar-default .navbar-brand{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+*/
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.page-header{
+    margin: 10px 0 10px;
+}
+
+.h1, h1{
+    font-size: 20px;
+}
+
+label{
+    font-style: italic;    
+}
+
+input{
+    height:30px;
+}
+
+.form-control{
+    height:30px;   
+}

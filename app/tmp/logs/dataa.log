@@ -1,0 +1,425 @@
+2018-12-28 12:46:36 Dataa: Array
+(
+)
+
+2018-12-28 12:46:39 Dataa: Array
+(
+    [Cash] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Cash
+                    [person_account_id] => 72
+                    [label_OR] => 004
+                    [label_AmountR] => 40000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 72
+                    [account_number] => CASH
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => CASH
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Disbursement] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Disbursement
+                    [person_account_id] => 71
+                    [label_OR] => 79721
+                    [label_AmountR] => 1000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => use for gas
+                    [id] => 71
+                    [account_number] => ELECTRIC BILL
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => ELECTRIC BILL
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Others] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Others
+                    [person_account_id] => 70
+                    [label_OR] => 410821
+                    [label_AmountR] => 2000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 70
+                    [account_number] => SKYCABLE
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => SKYCABLE
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsDown] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsDown
+                    [person_account_id] => 61
+                    [label_OR] => 01
+                    [label_AmountR] => 10000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsUpdate] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsUpdate
+                    [person_account_id] => 61
+                    [label_OR] => 003
+                    [label_AmountR] => 1500.00
+                    [label_AmountPPD] => 500.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+)
+
+2018-12-28 13:23:43 Dataa: Array
+(
+    [Cash] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Cash
+                    [person_account_id] => 72
+                    [label_OR] => 004
+                    [label_AmountR] => 40000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 72
+                    [account_number] => CASH
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => CASH
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Disbursement] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Disbursement
+                    [person_account_id] => 71
+                    [label_OR] => 79721
+                    [label_AmountR] => 1000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => use for gas
+                    [id] => 71
+                    [account_number] => ELECTRIC BILL
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => ELECTRIC BILL
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Others] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Others
+                    [person_account_id] => 70
+                    [label_OR] => 410821
+                    [label_AmountR] => 2000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 70
+                    [account_number] => SKYCABLE
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => SKYCABLE
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsDown] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsDown
+                    [person_account_id] => 61
+                    [label_OR] => 01
+                    [label_AmountR] => 10000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsUpdate] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsUpdate
+                    [person_account_id] => 61
+                    [label_OR] => 003
+                    [label_AmountR] => 1500.00
+                    [label_AmountPPD] => 500.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+)
+
+2018-12-28 13:35:29 Dataa: Array
+(
+)
+
+2018-12-28 13:35:31 Dataa: Array
+(
+    [Cash] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Cash
+                    [person_account_id] => 72
+                    [label_OR] => 004
+                    [label_AmountR] => 40000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 72
+                    [account_number] => CASH
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => CASH
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Disbursement] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Disbursement
+                    [person_account_id] => 71
+                    [label_OR] => 79721
+                    [label_AmountR] => 1000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => use for gas
+                    [id] => 71
+                    [account_number] => ELECTRIC BILL
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => ELECTRIC BILL
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [Others] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => Others
+                    [person_account_id] => 70
+                    [label_OR] => 410821
+                    [label_AmountR] => 2000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => NOTE
+                    [id] => 70
+                    [account_number] => SKYCABLE
+                    [last_name] => 
+                    [first_name] => 
+                    [middle_name] => 
+                    [company] => SKYCABLE
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsDown] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsDown
+                    [person_account_id] => 61
+                    [label_OR] => 01
+                    [label_AmountR] => 10000.00
+                    [label_AmountPPD] => 0.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+    [InsUpdate] => Array
+        (
+            [0] => Array
+                (
+                    [label_Type] => InsUpdate
+                    [person_account_id] => 61
+                    [label_OR] => 003
+                    [label_AmountR] => 1500.00
+                    [label_AmountPPD] => 500.00
+                    [labelpaymentdate] => 2018-12-27
+                    [labelremarks] => 
+                    [id] => 61
+                    [account_number] => New Account
+                    [last_name] => New Account
+                    [first_name] => Appliances
+                    [middle_name] => 
+                    [company] => 
+                    [mobile_no] => 
+                    [address] => 
+                    [account_type_id] => 1
+                    [user_id] => 
+                    [enabled] => 1
+                    [entry_datetime] => 
+                )
+
+        )
+
+)
+

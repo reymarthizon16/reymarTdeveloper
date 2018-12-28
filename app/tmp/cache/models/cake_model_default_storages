@@ -1,0 +1,6 @@
+1632288881
+a:8:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:6:"status";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:5;s:7:"comment";s:57:"1 Normal
+2 On Transfer
+3 Customer Owned
+4 Service Center
+";}s:9:"serial_no";a:7:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:45;s:3:"key";s:5:"index";s:7:"collate";s:17:"latin1_swedish_ci";s:7:"charset";s:6:"latin1";}s:9:"branch_id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:5:"index";}s:7:"enabled";a:4:{s:4:"type";s:7:"boolean";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:1;}s:14:"entry_datetime";a:4:{s:4:"type";s:8:"datetime";s:4:"null";b:1;s:7:"default";N;s:6:"length";N;}s:7:"user_id";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;}s:16:"secondary_status";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;}}
