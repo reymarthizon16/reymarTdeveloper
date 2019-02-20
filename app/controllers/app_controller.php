@@ -85,7 +85,7 @@ class AppController extends Controller {
 		$query = "select * from (
 			SELECT TABLE_NAME,COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT , COLUMN_KEY
 			  FROM INFORMATION_SCHEMA.COLUMNS
-			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrust_live' 
+			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrust_test3' 
 			  ".$notinString."
 			) TableDesc";
 		// $this->log($query,'Mainquery');
@@ -136,6 +136,18 @@ class AppController extends Controller {
 			$accountlist[$value['Account']['id']]['address'] = $value['Account']['address'];
 		}
 		return $accountlist;
+	}
+
+	function getUserSales(){
+		
+		$this->loadModel('User');
+		$users=$this->User->find('all',array('fields'=>array('id','last_name','first_name'),'conditions'=>array('enabled'=>true,'role'=>3),'recursive'=>-1));
+		// debug($users);
+		foreach ($users as $key => $value) {
+			$userlists[$value['User']['id']] = $value['User']['last_name'].', '.$value['User']['first_name'];			
+		}
+
+		return $userlists;
 	}
 
 	function monthDifference($start_date,$end_date){

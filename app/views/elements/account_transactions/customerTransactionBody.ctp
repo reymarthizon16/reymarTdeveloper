@@ -66,10 +66,11 @@
                                 <div class="" style="">
                                     <label>Branch:</label>                            
                                     <?php echo $this->Form->input('AccountTransaction.branch_id',array('class'=>'form-control','empty'=>'Select Branch','label'=>false,'type'=>'select','options'=>$branches,'value'=>$accTvalue['branch_id'],'div'=>false)); ?>
+                                    
                                 </div>
                                 <div class="divType1 divType2" style="">
-                                    <label>Sales Man Code:</label>                            
-                                    <input name="data[AccountTransaction][transaction_sales_man_code]" type="text" id="AccountTransactionTransactionSalesManCode" class="form-control " autocomplete="off" value="<?php echo $accTvalue['transaction_sales_man_code'] ?>">
+                                    <label>Sales Man Code:</label>
+                                    <?php echo $this->Form->input('AccountTransaction.transaction_sales_man_code',array('class'=>'form-control','empty'=>'Select Sales Man','label'=>false,'type'=>'select','options'=>$sales_users,'value'=>$accTvalue['transaction_sales_man_code'],'div'=>false)); ?>                                    
                                 </div>
                                 
                                 <div class="divType2" style="">
@@ -101,6 +102,11 @@
                                     <label>Payment OR:</label>                            
                                     <input name="data[AccountTransaction][payment_or]" type="text" id="AccountTransactionPaymentOR" class="form-control" autocomplete="off" value="<?php echo $accTvalue['payment_or']?>">
                                 </div>
+                                <div class=" divType5" style="">
+                                    <label>Payment OR DATE:</label>                            
+                                    <input name="data[AccountTransaction][payment_or_date]" type="text" id="AccountTransactionPaymentORDate" class="form-control datepicker" autocomplete="off" value="<?php echo $accTvalue['payment_or_date']?>">
+                                </div>
+
                                 <div class="divType1 divType4 divType5" style="">
 
                                     <label>Payment Date:</label>                            
@@ -166,7 +172,7 @@
                         </div>
                     </div>
 
-                    <div class='setFlex divType2' style="border-top:1px solid black;border-bottom:1px solid black;">
+                    <div class='setFlex divType2 InstallmentDiv' style="border-top:1px solid black;border-bottom:1px solid black;">
                         
                         <div class="" style="">
                             <label>PN BALANCE:</label>                            

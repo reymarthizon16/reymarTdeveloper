@@ -18,8 +18,9 @@
                     <thead>
                         <tr>
                             <th>Id</th>                                
-                            <th>Date</th>      
                             <th>Branch</th>      
+                            <th>Date Reference</th>      
+                            <th>Date Deposited</th>      
                             <th>Deposit Amount</th>                            
                             <th>Action</th>
                         </tr>
@@ -28,8 +29,9 @@
                         <?php foreach ($depositSlips as $key => $value) { ?>
                         <tr class="odd gradeX">
                             <td><?php echo $value['DepositSlip']['id']; ?></td>
-                            <td><?php echo $value['DepositSlip']['deposit_date']; ?></td>
                             <td><?php echo $branches[$value['DepositSlip']['branch_id']]; ?></td>
+                            <td><?php echo $value['DepositSlip']['deposit_date']; ?></td>
+                            <td><?php echo $value['DepositSlip']['date_deposited']; ?></td>
                             <td><?php echo $value['DepositSlip']['deposit_amount']; ?></td>
                             <td class="center">
                                 <button class="btn btn-default" onclick="window.location='/accounting/depositSlips/edit/<?php echo $value['DepositSlip']['id']; ?>';" type="button"><i class="glyphicon glyphicon-edit"></i></button>

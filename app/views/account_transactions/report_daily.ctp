@@ -62,7 +62,7 @@
                                     <td><?php echo $datadetail['account_number'] ?></td>
                                     <td><?php echo $datadetail['last_name'] ?> <?php echo $datadetail['first_name'] ?></td>
                                     <td><?php echo $datadetail['label_OR'] ?></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php 
                                     $label_AmountR += $datadetail['label_AmountR'];
                                     $label_AmountPPD += $datadetail['label_AmountPPD']; 
@@ -86,7 +86,7 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountDown += $datadetail['label_AmountR']; ?>
                                     <?php $Collection += $datadetail['label_AmountR']; ?>
 
@@ -97,7 +97,7 @@
                                     <td><?php echo $datadetail['account_number'] ?></td>
                                     <td><?php echo $datadetail['last_name'] ?> <?php echo $datadetail['first_name'] ?> <?php echo $datadetail['company'] ?></td>
                                     <td><?php echo $datadetail['label_OR'] ?></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountR += $datadetail['label_AmountR']; ?>
                                     <?php $Deducted += $datadetail['label_AmountR']; ?>
                                     <td></td>
@@ -112,12 +112,12 @@
                                     <td><?php echo $datadetail['account_number'] ?></td>
                                     <td><?php echo $datadetail['last_name'] ?> <?php echo $datadetail['first_name'] ?> <?php echo $datadetail['company'] ?></td>
                                     <td><?php echo $datadetail['label_OR'] ?></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountR += $datadetail['label_AmountR']; ?>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountCR += $datadetail['label_AmountR']; ?>
                                     <?php $Collection += $datadetail['label_AmountR']; ?>
                                     <td></td>                                    
@@ -128,12 +128,12 @@
                                     <td><?php echo $datadetail['account_number'] ?></td>
                                     <td><?php echo $datadetail['last_name'] ?> <?php echo $datadetail['first_name'] ?> <?php echo $datadetail['company'] ?></td>
                                     <td><?php echo $datadetail['label_OR'] ?></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountR += $datadetail['label_AmountR']; ?>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td><?php echo $datadetail['label_AmountR'] ?></td>
+                                    <td><?php echo number_format($datadetail['label_AmountR'],2) ?></td>
                                     <?php $label_AmountCR += $datadetail['label_AmountR']; ?>
                                     <?php $Collection += $datadetail['label_AmountR']; ?>
                                     <td></td>                                    

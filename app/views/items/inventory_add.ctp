@@ -12,6 +12,7 @@
             <fieldset>
                 <?php echo $this->Form->input('branches',array('empty'=>'Select Branch')); ?>
                 <?php echo $this->element('common/createforms');?>
+                <?php echo $this->Form->input('status',array('type'=>'select','options'=>array('1'=>'Neutral','5'=>'Reposes'))); ?>
                 <?php echo $this->Form->input('entry_datetime',array('type'=>'text','class'=>'datetimepicker')); ?>
             </fieldset>
             <br>

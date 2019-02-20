@@ -4,7 +4,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 Account Profile
-                <a href="#" class="btn btn-info btn-sm newTransaction col-lg-offset-1" data-toggle="modal" data-target="#newTransaction" style="float: right;">Add New Transaction</a>
+                <!-- <a href="#" class="btn btn-info btn-sm newTransaction col-lg-offset-1" data-toggle="modal" data-target="#newTransaction" style="float: right;">Add New Transaction</a> -->
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -50,7 +50,7 @@
                                                                     </div>
                                                                     <div id="collapseOne<?php echo $accTkey; ?>" class="panel-collapse collapse <?php if($accTvalue['id'] == $transactionId) echo "in"; ?>">
                                                                         <div class="panel-body">
-                                                                            
+                                                                            <button style="float: right;" class="btn btn-success" onclick="window.location='<?php echo '/accounting/account_transactions/printledger/'.$this->data['Account']['id'].'/'.$accTvalue['id']; ?>';" type="button"><i class="glyphicon glyphicon-print"></i></button>
                                                                             <div class="panel panel-default">
                                                                                 <!-- <div class="panel-heading">
                                                                                     &nbsp;
@@ -67,7 +67,7 @@
 
                                                                         </div>
                                                                         <div style="margin: 10px;" class="row">
-                                                                            <button type="submit" class="btn btn-success col-lg-offset-10    col-lg-2" style="">Save</button>
+                                                                            <button type="submit" class="btn btn-success col-lg-offset-10  SavingTransaction   col-lg-2" style="">Save</button>
                                                                         </div>
                                                                     </div>
                                                                     <?php echo $this->Form->end();?>                                                            
@@ -112,7 +112,7 @@
 
                                                                         </div>
                                                                         <div style="margin: 10px;" class="row">
-                                                                            <button type="submit" class="btn btn-success col-lg-offset-10    col-lg-2" style="">Save</button>
+                                                                            <button type="submit" class="btn btn-success col-lg-offset-10  SavingTransaction  col-lg-2" style="">Save</button>
                                                                         </div>
                                                                     </div>
 
@@ -168,6 +168,14 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function(){
+
+        jQuery('.panel-body .addInstallment').css({'display':'none'});
+        jQuery('.panel-body .addItemPayment').css({'display':'none'});
+        jQuery('.panel-body .SavingTransaction').css({'display':'none'});
+        jQuery('.panel-body .addItemTransaction').css({'display':'none'});
+        jQuery('.panel-body .removeItem').css({'display':'none'});
+        jQuery('.panel-body input,select').attr('readonly','readonly');
+        jQuery('.panel-body input,select').attr('disabled','disabled');
 
         // jQuery('.newTransaction').unbind();
         // jQuery('.newTransaction').click(function(){

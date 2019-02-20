@@ -3,7 +3,7 @@ class ItemsController extends AppController {
 
 	var $name = 'Items';
 	var $uses = array('Item','ItemIncrement','Type','Model','ItemHistory','Brand','Account','Branch','Storage');
-	var $paginate = array('limit' => 9999);
+	var $paginate = array('limit' => 99999);
 	
 	function inventory_index(){
 		$this->index();
@@ -11,6 +11,17 @@ class ItemsController extends AppController {
 
 	function index() {
 		$this->Item->recursive = 0;
+		
+		if(empty($this->data['item_filter'])){
+			$this->data['item_filter']['Item.status'][0] = 1;			
+		}
+
+		if(!empty($this->data['item_filter'])){
+			$conditions['conditions'] = $this->data['item_filter'];
+			$conditions['limit']=99999;
+			$this->paginate = $conditions;
+		}
+
 		$this->set('items', $this->paginate());
 		$brands = $this->Brand->find('list');
 		$this->set('brands',$brands);
@@ -35,6 +46,15 @@ class ItemsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.', true));
 			}*/
+			
+			$statusUpdate = '';
+			if( $this->data['Item']['status']==1 || $this->data['Item']['status']==5){
+				$statusUpdate = " b.status = '".$this->data['Item']['status']."', a.status = '".$this->data['Item']['status']."', ";
+			}
+			$started_branch_idUpdate='';
+			if(!empty($this->data['Item']['started_branch_id']) && $this->data['Item']['change_branch'] == 1 )
+				$started_branch_idUpdate=" b.branch_id='".$this->data['Item']['started_branch_id']."' ,  a.started_branch_id='".$this->data['Item']['started_branch_id']."', ";
+
 			$updateSerial="
 				update
 					items a
@@ -47,6 +67,8 @@ class ItemsController extends AppController {
 					left join stock_transfer_transaction_details stfold on a.serial_no = stfold.replaced_serial_no
 					left join items fnew on a.serial_no = fnew.new_serial_no
 					set
+						{$statusUpdate}
+						{$started_branch_idUpdate}
 						a.serial_no = '{$this->data['Item']['serial_no']}',
 						a.model_id = '{$this->data['Item']['model_id']}',
 						a.brand_id = '{$this->data['Item']['brand_id']}',
@@ -92,7 +114,10 @@ class ItemsController extends AppController {
 
 		$this->set('originalSerialNo',$id);
 
-		$fields = $this->Item->query( $this->getTableDescQueryString('items',array('status','quantity','reference_no','receiving_report_no','receiving_datetime','source_account_id','sold_price','down_payment_price','delivery_receipt_no','delivery_datetime','owner_account_id','sold_by_user_id','enabled','entry_datetime','user_id','repair_on_account_id','repair_datetime','is_repair','secondary_status','is_replaced','old_serial_no','new_serial_no')) );
+		$fields = $this->Item->query( $this->getTableDescQueryString('items',array('status','quantity','reference_no','receiving_report_no','receiving_datetime','source_account_id','sold_price','down_payment_price','delivery_receipt_no','delivery_datetime','owner_account_id','sold_by_user_id','enabled','entry_datetime','user_id','repair_on_account_id','repair_datetime','is_repair','secondary_status','is_replaced','old_serial_no','new_serial_no','started_branch_id')) );
+
+		$branches = $this->Branch->find('list',array('conditions'=>array('enabled'=>true)));	
+		$this->set('startedBranches',$branches);
 
 		$this->set('model','Item');
 		$this->set('modelfields',$fields);
@@ -168,7 +193,7 @@ class ItemsController extends AppController {
 				$entry_datetime = date('Y-m-d H:i:s',strtotime($this->data['Item']['entry_datetime']));
 				$tmp['Storage'] = array(
 						'serial_no'=>$this->data['Item']['serial_no'],
-						'status'=>1,
+						'status'=>$this->data['Item']['status'],
 						'branch_id'=>$this->data['Item']['branches'],
 						'enabled' => true,
 						'entry_datetime'=>$entry_datetime

@@ -16,15 +16,15 @@
                             <th>Mobile no.</th>
                             <th>Address</th>
                             <th>Branch</th>
-                           
+                            
                             <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $seq = 0;           
-                        foreach ($accountTransactions as $accTkey => $accTvalue) { 
-                            if( $accTvalue['AccountTransaction']['collection_type_id'] == 2 && $accTvalue['AccountTransaction']['account_closed'] == 0 ){
-                            ?>
+                        foreach ($accountTransactions as $accTkey => $accTvalue) {
+                            if( $accTvalue['AccountTransaction']['collection_type_id'] == 4 ){
+                         ?>
                             <tr class="<?php if($seq % 2 == 0) echo "odd"; else echo "even"; ?> gradeX">
                                 <td><?php echo $accTvalue['AccountTransaction']['id'] ?></td>
                                 <td><?php echo $accTvalue['AccountTransaction']['transaction_account_number'] ?></td>

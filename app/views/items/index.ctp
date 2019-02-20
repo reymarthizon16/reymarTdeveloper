@@ -10,10 +10,54 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">               
-            
+                <form action="/inventory/items/index" method="POST">
+                    
+                    <div style="" class="filter">
+                        <div class="form-group" style="">
+                            <label>Status</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("1",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="1">NEUTRAL
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("2",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="2">ON DELIVERY
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("3",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="3">SOLD
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("5",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="5">REPOSES
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("6",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="6">Service Center
+                            </label>
+                            <button type="submit" class="btn btn-primary">Filter</button>
+                        </div>
+                    </div> 
+                </form>
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
+               
                 <?php //debug($items); ?>
                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>

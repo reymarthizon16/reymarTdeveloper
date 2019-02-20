@@ -184,9 +184,9 @@ class StoragesController extends AppController {
 					$data['Brand']= $brand['Brand'];
 					$this->loadModel('StockTransferTransaction');
 					$this->loadModel('StockTransferTransactionDetail');
-					$stransferdet =$this->StockTransferTransactionDetail->find('first',array('conditions'=>array('serial_no'=>$this->data['serial_no']),'recursive'=>-1));
-					$stransfer =$this->StockTransferTransaction->find('first',array('conditions'=>array('id'=>$stransferdet['StockTransferTransactionDetail']['stock_transfer_transaction_id']),'recursive'=>-1));
+					$stransfer =$this->StockTransferTransaction->find('first',array('conditions'=>array('stock_transfer_no'=>$this->data['stock_transfer_id']),'recursive'=>-1));
 					
+					$stransferdet =$this->StockTransferTransactionDetail->find('first',array('conditions'=>array('serial_no'=>$this->data['serial_no'],'stock_transfer_transaction_id'=>$stransfer['StockTransferTransaction']['id']),'recursive'=>-1));
 					if( empty($stransferdet) || empty($stransfer)  )
 						$data['exsisting'] = false;
 

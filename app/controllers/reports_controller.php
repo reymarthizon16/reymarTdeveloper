@@ -24,23 +24,102 @@ class ReportsController extends AppController {
 				join models c on c.id = b.model_id 
 				join branches d on d.id = b.started_branch_id
 			where 
-				( b.started_branch_id = '{$branchId}' and b.entry_datetime < '{$endDate}' and b.status in (1,3))
+				( b.started_branch_id = '{$branchId}' and b.entry_datetime <= '{$endDate}' and b.status in (1,2,3))
 				or
 				( b.started_branch_id = '{$branchId}' and b.status = 5)
+				
 			group by b.model_id, b.status
 		)Reports
 		";		
-		
+		$this->log($prevQuery,'prevQuery');
 		$prevStock = $this->Model->query($prevQuery);
 
 		foreach ($prevStock as $tmpkey => $tmpvalue) {
-			if($tmpvalue['Reports']['status'] == 1 || $tmpvalue['Reports']['status'] == 3)
+			if($tmpvalue['Reports']['status'] == 1 || $tmpvalue['Reports']['status'] == 3 || $tmpvalue['Reports']['status'] == 2)
 				$data['prevStock'] [ $tmpvalue['Reports']['model_id'] ] ['total']+= $tmpvalue['Reports']['total'];
 			if($tmpvalue['Reports']['status'] == 5)
 				$data['repoStock'] [ $tmpvalue['Reports']['model_id'] ] ['total']= $tmpvalue['Reports']['total'];
 
 			$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
 		}
+
+		$deliveryQueryPrev = "
+		select * from (
+			select 
+				model_id,branch_id,sum(if(statuss = 'plus', total, 0) - if(statuss = 'minus', total, 0) ) as total
+			from (
+				select 
+					#b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+					b.model_id,a.to_branch_id as branch_id,'plus' as statuss ,count( distinct(b.serial_no) ) as total,rand()
+				 from 
+					receiving_transaction_details a 
+					join receiving_transactions aa on a.receiving_transaction_id = aa.id
+					join items b on a.serial_no = b.serial_no 
+					join models c on c.id = b.model_id 
+					join branches d on d.id = a.to_branch_id
+				where 
+					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
+					and aa.type = 1 and aa.receiving_datetime < '{$startDate}'
+					
+				group by b.model_id,a.from_branch_id
+				
+				union
+
+				select 
+					#b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+					b.model_id,a.to_branch_id as branch_id,'plus' as statuss ,count( distinct(b.serial_no) ) as total,rand()
+				 from 
+					receiving_transaction_details a 
+					join receiving_transactions aa on a.receiving_transaction_id = aa.id
+					join items b on a.serial_no = b.serial_no 
+					join models c on c.id = b.model_id 
+					join branches d on d.id = a.to_branch_id
+				where 
+					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
+					and aa.type = 2 and aa.receiving_datetime < '{$startDate}'
+					
+				group by b.model_id,a.from_branch_id
+				
+				union
+				
+				select 
+					c.model_id,a.from_branch_id as branch_id,'minus' as statuss ,count( distinct(b.serial_no) ) as total,rand()
+					from 
+					stock_transfer_transactions a 
+					join stock_transfer_transaction_details b on a.id = b.stock_transfer_transaction_id
+					join items c on c.serial_no = b.serial_no
+				where 
+
+					a.type = 1 and a.from_branch_id ='{$branchId}' and b.confirm = 1
+					and a.stock_transfer_datetime < '{$startDate}' 
+					
+				group by c.model_id,a.from_branch_id
+				
+				union
+				
+				select 
+					c.model_id,b.from_branch_id as branch_id,'minus' as statuss ,count( distinct(b.serial_no) ) as total,rand()
+					from 
+					sold_transactions a 
+					join sold_transaction_details b on a.id = b.sold_transaction_id
+					join items c on c.serial_no = b.serial_no
+				where 
+
+					a.cancel = 0 and a.delivery_datetime < '{$startDate}' 
+					and b.from_branch_id = '{$branchId}'
+					
+				group by c.model_id,b.from_branch_id
+			)Rep group by model_id
+		)Reports
+		";
+		$this->log($deliveryQueryPrev,'deliveryQueryPrev');
+		$deliveryStockPrev = $this->Model->query($deliveryQueryPrev);
+
+		foreach ($deliveryStockPrev as $tmpkey => $tmpvalue) {
+			$data['prevStock'] [ $tmpvalue['Reports']['model_id'] ] ['total'] += $tmpvalue['Reports']['total'];
+			$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
+		}
+
 
 		$deliveryQuery = "
 		select * from (
@@ -55,6 +134,7 @@ class ReportsController extends AppController {
 			where 
 				a.confirmed = 1 and a.to_branch_id = '{$branchId}'
 				and aa.type = 1 and aa.receiving_datetime >= '{$startDate}' and aa.receiving_datetime <= '{$endDate}'
+				
 			group by b.model_id,a.from_branch_id
 		)Reports
 		";
@@ -79,6 +159,7 @@ class ReportsController extends AppController {
 			where 
 				a.confirmed = 1 and a.to_branch_id = '{$branchId}'
 				and aa.type = 2 and aa.receiving_datetime >= '{$startDate}' and aa.receiving_datetime <= '{$endDate}'
+				
 			group by b.model_id,a.from_branch_id
 		)Reports
 		";
@@ -104,6 +185,7 @@ class ReportsController extends AppController {
 			where
 				b.cancel = 0 and b.delivery_datetime >= '{$startDate}' and b.delivery_datetime <= '{$endDate}'
 				and a.from_branch_id = '{$branchId}'
+				
 			group by model_id,collection_type_id
 		)Reports
 			";
@@ -129,6 +211,7 @@ class ReportsController extends AppController {
 			where 
 				a.confirm = 1 and aa.from_branch_id = '{$branchId}'
 				and aa.stock_transfer_datetime >= '{$startDate}' and aa.stock_transfer_datetime <= '{$endDate}'
+				
 			group by b.model_id,aa.to_branch_id
 		)Reports
 		";
@@ -172,7 +255,7 @@ class ReportsController extends AppController {
 		$query1 ="
 		select * from (
 			select 
-				a.receiving_datetime,a.reference_no,a.receiving_report_no,c.company,e.name,d.serial_no,d.net_price
+				a.receiving_datetime,if(a.type=1,a.reference_no,a.stock_transfer_no) as reference_no,a.receiving_report_no,a.source_account_id,c.company,e.name,d.serial_no,d.net_price
 			 from 
 				receiving_transactions a 
 			    join receiving_transaction_details b on a.id = b.receiving_transaction_id 
@@ -189,21 +272,24 @@ class ReportsController extends AppController {
 
 		foreach ($final1 as $final1key => $final1value) {
 			
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['receiving_datetime'] = $final1value['Final']['receiving_datetime'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['reference_no'] = $final1value['Final']['reference_no'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['receiving_report_no'] = $final1value['Final']['receiving_report_no'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['company'] = $final1value['Final']['company'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['model'] = $final1value['Final']['name'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['Serials'][$final1value['Final']['serial_no']]['serial_no'] = $final1value['Final']['serial_no'];	
-			$data['from_supplier'][$final1value['Final']['receiving_report_no']] ['Serials'][$final1value['Final']['serial_no']]['net_price'] = $final1value['Final']['net_price'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['receiving_datetime'] = $final1value['Final']['receiving_datetime'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['reference_no'] = $final1value['Final']['reference_no'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['receiving_report_no'] = $final1value['Final']['receiving_report_no'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['company'] = $final1value['Final']['company'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['model'] = $final1value['Final']['name'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['Serials'][$final1value['Final']['serial_no']]['model'] = $final1value['Final']['name'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['Serials'][$final1value['Final']['serial_no']]['serial_no'] = $final1value['Final']['serial_no'];	
+			$data['from_supplier'][$final1value['Final']['receiving_datetime']] ['Serials'][$final1value['Final']['serial_no']]['net_price'] = $final1value['Final']['net_price'];	
 
 			$Serials[] = $final1value['Final']['serial_no'];
 		}
+
+		ksort($data['from_supplier']);
 		// Receive from Branch
 		$query2 ="
 		select * from (
 			select 
-				a.receiving_datetime,a.reference_no,a.receiving_report_no,c.name as branch,e.name as model,d.serial_no,d.net_price
+				a.receiving_datetime,if(a.type=1,a.reference_no,a.stock_transfer_no) as reference_no,a.receiving_report_no,a.source_account_id,c.name as branch,e.name as model,d.serial_no,d.net_price
 			 from 
 				receiving_transactions a 
 			    join receiving_transaction_details b on a.id = b.receiving_transaction_id 
@@ -219,24 +305,29 @@ class ReportsController extends AppController {
 		$final2 = $this->Model->query($query2);
 
 		foreach ($final2 as $final2key => $final2value) {
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['receiving_datetime'] = $final2value['Final']['receiving_datetime'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['reference_no'] = $final2value['Final']['reference_no'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['receiving_report_no'] = $final2value['Final']['receiving_report_no'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['branch'] = $final2value['Final']['branch'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['model'] = $final2value['Final']['model'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['Serials'][$final2value['Final']['serial_no']]['serial_no'] = $final2value['Final']['serial_no'];	
-			$data['from_branch'][$final2value['Final']['receiving_report_no']] ['Serials'][$final2value['Final']['serial_no']]['net_price'] = $final2value['Final']['net_price'];	
+
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['receiving_datetime'] = $final2value['Final']['receiving_datetime'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['reference_no'] = $final2value['Final']['reference_no'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['receiving_report_no'] = $final2value['Final']['receiving_report_no'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['branch'] = $final2value['Final']['branch'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['model'] = $final2value['Final']['model'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['Serials'][$final2value['Final']['serial_no']]['model'] = $final2value['Final']['model'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['Serials'][$final2value['Final']['serial_no']]['serial_no'] = $final2value['Final']['serial_no'];	
+			$data['from_branch'][$final2value['Final']['receiving_datetime']] ['Serials'][$final2value['Final']['serial_no']]['net_price'] = $final2value['Final']['net_price'];	
 
 			$Serials[] = $final2value['Final']['serial_no'];
+
 		}
+		ksort($data['from_branch']);
 
 		$modelS = $this->Model->find('list');
 		
 		//from previous
 		// $this->Storage->recursive = -1;
+		/*
 		$serial_no=$this->Storage->find('all',array('conditions'=>array(
 			'Storage.branch_id'=>$branchId,
-			'NOT' => array('Storage.serial_no' => $Serials ) )) );
+			'NOT' => array('Storage.serial_no' => $Serials ,'Storage.entry_datetime'<=$endDate) )) );
 
 		
 		foreach ($serial_no as $serial_no2key => $serial_no2value) {
@@ -244,6 +335,7 @@ class ReportsController extends AppController {
 			$data['from_previous'][$serial_no2key] ['serial'] = $serial_no2value['Item']['serial_no'];				
 			$data['from_previous'][$serial_no2key] ['net'] = $serial_no2value['Item']['net_price'];				
 		}
+		*/
 
 		// Stock Transfer Out
 		$query3 ="
@@ -269,6 +361,9 @@ class ReportsController extends AppController {
 			$stockOut[$final3value['Final']['serial_no']]['stock_datetime'] = $final3value['Final']['stock_transfer_datetime'];
 			$stockOut[$final3value['Final']['serial_no']]['stock_transfer_no'] = $final3value['Final']['stock_transfer_no'];
 			$stockOut[$final3value['Final']['serial_no']]['branch'] = $final3value['Final']['branch'];
+			$stockOut[$final3value['Final']['serial_no']]['type'] = 1;
+			$stockOut[$final3value['Final']['serial_no']]['model'] = $final3value['Final']['model'];
+			$stockOut[$final3value['Final']['serial_no']]['serial_no'] = $final3value['Final']['serial_no'];
 		}
 
 		// Sold
@@ -290,16 +385,22 @@ class ReportsController extends AppController {
 
 		$final4 = $this->Model->query($query4);
 
-
 		foreach ($final4 as $final4key => $final4value) {
 			$stockOut[$final4value['Final']['serial_no']]['stock_datetime'] = $final4value['Final']['delivery_datetime'];
 			$stockOut[$final4value['Final']['serial_no']]['stock_transfer_no'] = $final4value['Final']['delivery_receipt_no'];
 			$stockOut[$final4value['Final']['serial_no']]['branch'] = $final4value['Final']['owner'];
+			$stockOut[$final4value['Final']['serial_no']]['type'] = 2;
 
 			$stockOut[$final4value['Final']['serial_no']]['serial_no'] = $final4value['Final']['serial_no'];
 			$stockOut[$final4value['Final']['serial_no']]['model'] = $final4value['Final']['model'];
 			$stockOut[$final4value['Final']['serial_no']]['net_price'] = $final4value['Final']['net_price'];
 		}
+
+	
+	// sort($stockOut);
+	
+		// $stockOut=Set::sort($stockOut,'{n}.stock_datetime','asc');
+	
 
 		$this->set('models',$this->Model->find('list',array('conditions'=>array('enabled'=>true),'fields'=>array('id','name'))));
 		$this->set('types',$this->Type->find('list'));		
@@ -309,7 +410,7 @@ class ReportsController extends AppController {
 		$this->set('accounts',$this->Account->find('list'));
 
 		$this->set('filterBranches',$branch_idNs);
-
+	$this->log($data,'dataa');
 		$this->set('data',$data);
 		$this->set('stockOut',$stockOut);
 		$this->set('thisModelOnly',$thisModelOnly);

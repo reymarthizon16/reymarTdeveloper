@@ -7,7 +7,7 @@
                 <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
-                <?php echo $this->Form->create('Account',array('id'=>'supplierAccount','controller'=>'accounts','action'=>'add'));?>
+                <?php echo $this->Form->create('Account',array('id'=>'supplierAccount','prefix'=>$this->params['prefix'],'controller'=>'accounts','action'=>'add'));?>
 			    <fieldset>
 			        <legend><?php __('Accounts'); ?></legend>
 			    <?php
@@ -37,7 +37,7 @@
                 <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
-                <?php echo $this->Form->create('Account',array('id'=>'serviceCAccount','controller'=>'accounts','action'=>'add'));?>
+                <?php echo $this->Form->create('Account',array('id'=>'serviceCAccount','prefix'=>$this->params['prefix'],'controller'=>'accounts','action'=>'add'));?>
 			    <fieldset>
 			        <legend><?php __('Accounts'); ?></legend>
 			    <?php
@@ -67,7 +67,7 @@
                 <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
-                <?php echo $this->Form->create('Account',array('id'=>'customerAccount','controller'=>'accounts','action'=>'add'));?>
+                <?php echo $this->Form->create('Account',array('id'=>'customerAccount','prefix'=>$this->params['prefix'],'controller'=>'accounts','action'=>'add'));?>
 			    <fieldset>
 			        <legend><?php __('Accounts'); ?></legend>
 			    <?php
@@ -75,6 +75,8 @@
 			        echo $this->Form->input('last_name',array('class'=>'reset_class supplier_require'));
 			        echo $this->Form->input('first_name',array('class'=>'reset_class supplier_require'));
 			        echo $this->Form->input('middle_name',array('class'=>'reset_class'));			        
+			        echo $this->Form->input('mobile_no',array('class'=>'reset_class'));			        
+			        echo $this->Form->input('address',array('class'=>'reset_class'));			        
 			        echo $this->Form->hidden('account_type_id',array('value'=>1));
 			        echo $this->Form->hidden('enabled',array('value'=>1));
 			    ?>
@@ -103,7 +105,7 @@
 		        jQuery.ajax({
 		            async:false,
 		            data:dataa,
-		            url:'/inventory/accounts/quickadd/2',
+		            url:'/'+prefix+'/accounts/quickadd/2',
 		            type:'POST',
 		            dataType:'json',
 		            success:function(data){             
@@ -145,7 +147,7 @@
 		        jQuery.ajax({
 		            async:false,
 		            data:dataa,
-		            url:'/inventory/accounts/quickadd/3',
+		            url:'/'+prefix+'/accounts/quickadd/3',
 		            type:'POST',
 		            dataType:'json',
 		            success:function(data){             
@@ -187,7 +189,7 @@
 		        jQuery.ajax({
 		            async:false,
 		            data:dataa,
-		            url:'/inventory/accounts/quickadd/1',
+		            url:'/'+prefix+'/accounts/quickadd/1',
 		            type:'POST',
 		            dataType:'json',
 		            success:function(data){             

@@ -17,12 +17,16 @@
             <div class="panel-body">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tabforcustomers" data-toggle="tab" aria-expanded="false">Customers</a>
+                    <li class="active"><a href="#tabforcustomers" data-toggle="tab" aria-expanded="false">Installments Open Acc.</a>
                     </li>
-                    <!-- <li class=""><a href="#tabforsuppliers" data-toggle="tab" aria-expanded="false">Suppliers</a>
+                    <li><a href="#tabforcustomers_closed" data-toggle="tab" aria-expanded="false">Installments Close Acc.</a>
                     </li>
-                    <li class=""><a href="#tabforserviceCenters" data-toggle="tab" aria-expanded="false">Service Centers</a>
-                    </li> -->
+                    <li><a href="#tabforcustomers_cash" data-toggle="tab" aria-expanded="false">Cash</a>
+                    </li>
+                    <li><a href="#tabforcustomers_others" data-toggle="tab" aria-expanded="false">Others/Loads</a>
+                    </li>
+                    <li><a href="#tabforcustomers_disburstment" data-toggle="tab" aria-expanded="false">Disburstment</a>
+                    </li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -30,12 +34,18 @@
                     <div class="tab-pane fade active in" id="tabforcustomers">                        
                         <?php echo $this->element('account_transactions/customerIndex'); ?>
                     </div>
-                    <!-- <div class="tab-pane fade " id="tabforsuppliers">
-                        <?php //echo $this->element('accounts/suppliersIndex'); ?>
+                    <div class="tab-pane" id="tabforcustomers_closed">                        
+                        <?php echo $this->element('account_transactions/customerIndexClose'); ?>
                     </div>
-                    <div class="tab-pane fade " id="tabforserviceCenters">
-                        <?php //echo $this->element('accounts/servicecenterIndex'); ?>
-                    </div> -->
+                    <div class="tab-pane" id="tabforcustomers_cash">                        
+                        <?php echo $this->element('account_transactions/customerIndexCash'); ?>
+                    </div>
+                    <div class="tab-pane" id="tabforcustomers_others">                        
+                        <?php echo $this->element('account_transactions/customerIndexOther'); ?>
+                    </div>
+                    <div class="tab-pane" id="tabforcustomers_disburstment">                        
+                        <?php echo $this->element('account_transactions/customerIndexDisburstment'); ?>
+                    </div> 
                 </div>
             </div>
             <!-- /.panel-body -->

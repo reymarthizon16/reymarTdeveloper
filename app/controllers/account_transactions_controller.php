@@ -16,6 +16,7 @@ class AccountTransactionsController extends AppController {
 		$this->set('branches',$this->Branch->find('list'));
 		$this->set('accountCustomers',$this->getAccountCustomerFulldet());
 		$this->set('accountCompanies',$this->Account->find('list',array('fields'=>array('id','company'),'conditions'=>array('enabled'=>1))));//,'account_type_id'=>array(2,3)
+		$this->set('sales_users',$this->getUserSales());
 
 		$this->render('index');
 	}
@@ -33,7 +34,7 @@ class AccountTransactionsController extends AppController {
 		}	
 
 		//this->data recompute
-		$this->savewithcompute($person_id);		
+		$this->savewithcompute($person_id);
 
 		$this->set('person_id',$person_id);
 		$this->set('transactionId',$id);
@@ -46,12 +47,37 @@ class AccountTransactionsController extends AppController {
 		$this->set('users',$this->User->find('list'));
 		$this->set('accountCustomers',$this->getAccountCustomerFulldet());
 		$this->set('accountCompanies',$this->Account->find('list',array('fields'=>array('id','company'),'conditions'=>array('enabled'=>1,'account_type_id'=>array(2,3)))));
-		
+		$this->set('sales_users',$this->getUserSales());
 		$this->render('edit');
 	}
 
+	function accounting_printledger($person_id,$id=null){
+		$this->printledger($person_id,$id);
+	}
+
+	function printledger($person_id,$id=null) {
+			
+		//this->data recompute
+		$this->savewithcompute($person_id);
+
+		$this->set('person_id',$person_id);
+		$this->set('transactionId',$id);
+
+		$params['types'] = $this->Type->find('list');
+		$params['brands'] = $this->Brand->find('list');
+		$params['models'] = $this->Model->find('list');
+		$this->set('params',$params);
+		$this->set('branches',$this->Branch->find('list'));
+		$this->set('users',$this->User->find('list'));
+		$this->set('accountCustomers',$this->getAccountCustomerFulldet());
+		$this->set('accountCompanies',$this->Account->find('list',array('fields'=>array('id','company'),'conditions'=>array('enabled'=>1,'account_type_id'=>array(2,3)))));
+		$this->set('sales_users',$this->getUserSales());
+		$this->layout = 'pdf';
+		$this->render('printledger');
+	}
+
 	function savewithcompute($person_id = null){
-		$this->log($this->data,'savewithcompute');
+		
 		if($person_id != null){
 			$this->data = $this->Account->Behaviors->attach('containable');
 			$this->data = $this->Account->find('first',array(
@@ -65,10 +91,21 @@ class AccountTransactionsController extends AppController {
 					)
 				)
 			));
-			$this->data['AccountTransaction'] = $this->data['AccountTransaction'][0];
-		}
 			
+			$marilyn = $this->data;
+		}else{
+			$marilyn[0] = $this->data;
+		}
 
+		foreach ($marilyn as $marilynkey => &$marilynvalue) {
+
+			$this->data = array();						
+
+			if(isset($marilynvalue[0]))
+				$this->data['AccountTransaction'] = $marilynvalue[0];
+			else
+				$this->data = $marilynvalue;
+			
 			if(empty($this->data['AccountTransaction']['id']))
 				$this->AccountTransaction->create();
 				
@@ -163,7 +200,9 @@ class AccountTransactionsController extends AppController {
 									}
 									else
 										$continue_dueDate = date('Y-m-d',strtotime($continue_dueDate.' +1 month'));
-									$acdetvalue['due_date'] = date('Y-m-d',strtotime($continue_dueDate));
+
+									//continue DueDate
+									// $acdetvalue['due_date'] = date('Y-m-d',strtotime($continue_dueDate));
 								}
 								//important end
 
@@ -187,7 +226,7 @@ class AccountTransactionsController extends AppController {
 						foreach ($parentToUpdate as $parentkey => $parentvalue) {
 							$this->AccountTransactionDetail->recursive=-1;
 							$parentData = $this->AccountTransactionDetail->findbyId($parentkey);
-							if( $parentData['AccountTransactionDetail']['amount_due'] <= $parentvalue){
+							if( $parentData['AccountTransactionDetail']['amount_due'] + $parentData['AccountTransactionDetail']['interest']  <= $parentvalue){
 								$parentData['AccountTransactionDetail']['paid'] = 1;
 								$pn_value -= $parentvalue;
 								$parentData['AccountTransactionDetail']['balance_amount'] = $pn_value;
@@ -222,6 +261,12 @@ class AccountTransactionsController extends AppController {
 						}
 						$this->data['AccountTransaction']['not_due'] = $this->data['AccountTransaction']['current'] + $this->data['AccountTransaction']['overdue'];
 						$this->data['AccountTransaction']['pn_balance'] = $this->data['AccountTransaction']['pn_value'] - ($params['payment_amount'] + $params['discount']);
+
+						if($this->data['AccountTransaction']['pn_balance'] <= 0)
+							$this->data['AccountTransaction']['account_closed'] = 1;
+						else
+							$this->data['AccountTransaction']['account_closed'] = 0;
+						
 						$this->AccountTransaction->save($this->data['AccountTransaction']);
 					}
 
@@ -240,8 +285,10 @@ class AccountTransactionsController extends AppController {
 					
 				}
 			}
+			
 			$this->log($this->AccountTransaction->getDataSource()->getLog(false, false),'superlog');			
-		
+		}
+
 		if($person_id != null){
 			$this->data = $this->Account->Behaviors->attach('containable');
 			$this->data = $this->Account->find('first',array(
@@ -277,7 +324,7 @@ class AccountTransactionsController extends AppController {
 	}
 
 	function addCollection(){
-		$this->log($this->data,'addCollection');
+		
 		$result = $this->AccountTransaction->find('first',array(
 			'conditions'=>array(
 				'or'=>array(
@@ -327,7 +374,7 @@ class AccountTransactionsController extends AppController {
 						accounts a on a.id = b.person_account_id
 					left join
 						account_transaction_details c on c.account_transaction_id = b.id and c.type = 2 and c.due_date <= '{$enddate}'				
-					where b.collection_type_id = 2
+					where b.collection_type_id = 2 and b.account_closed = 0 and b.branch_id = '{$this->data['branch_id']}'
 					group by b.id
 					order by c.due_date asc
 				)Report
@@ -407,7 +454,7 @@ class AccountTransactionsController extends AppController {
 						account_transactions a  where a.collection_type_id = 5 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'
 				) A join accounts BB on A.person_account_id = BB.id
 			) Final			    
-			";
+			";	
 
 		$finalReport = $this->AccountTransaction->query($query);
 	
@@ -500,6 +547,392 @@ class AccountTransactionsController extends AppController {
 		}
 		$this->layout='ajax';
 		$this->set('data',$data);
+		$this->render('/common/json');
+	}
+
+	function accounting_new_account(){
+
+		if($this->data){
+			$this->savewithcompute();
+			$this->Session->setFlash(__('Success', true));
+			$this->redirect('/accounting/account_transactions/new_account');
+		}	
+
+		$this->set('accountCustomers',$this->getAccountCustomer());
+		$params['types'] = $this->Type->find('list');
+		$params['brands'] = $this->Brand->find('list');
+		$params['models'] = $this->Model->find('list');
+		$this->set('params',$params);
+		$this->set('branches',$this->Branch->find('list'));
+		$this->set('users',$this->User->find('list'));
+		$this->set('sales_users',$this->getUserSales());
+
+	}
+
+	function accounting_installment(){
+
+		if($this->data){
+			$this->savewithcompute();
+			$this->Session->setFlash(__('Success', true));
+			$this->redirect('/accounting/account_transactions/installment');
+		}	
+
+		$this->set('accountCustomers',$this->getAccountCustomer());
+		$params['types'] = $this->Type->find('list');
+		$params['brands'] = $this->Brand->find('list');
+		$params['models'] = $this->Model->find('list');
+		$this->set('params',$params);
+		$this->set('branches',$this->Branch->find('list'));
+		$this->set('users',$this->User->find('list'));
+
+		$this->set('month',$this->month());
+		$this->set('year',$this->year());
+
+	}
+
+
+	function accounting_getAccountInfo(){
+
+		$account = array();
+		$account = $this->AccountTransaction->find('first',array(
+			'conditions'=>array(
+				'or'=>array(
+					array('AccountTransaction.transaction_account_number'=>$this->data['AccDrNo'],'AccountTransaction.branch_id'=>$this->data['BranchId']),
+					array('AccountTransaction.transaction_dr_no'=>$this->data['AccDrNo'],'AccountTransaction.branch_id'=>$this->data['BranchId']),
+				),array('AccountTransaction.collection_type_id'=>2),
+			),
+		));	
+		
+		if(!empty($account['AccountTransactionDetail'])){
+			$trash = $account['AccountTransactionDetail'];
+			$account['AccountTransactionDetail'] = array();
+			foreach ($trash as $trashkey => $trashvalue) {
+				if( $trashvalue['type']==2 )
+					$account['AccountTransactionDetail'] [ $trashvalue['due_date'] ]  = $trashvalue;
+			}
+			ksort($account['AccountTransactionDetail']);
+		}
+
+		if(!empty($account))
+			$account['success'] = true;
+		else
+			$account['success'] = false;
+
+			$account['params']['types'] = $this->Type->find('list');
+			$account['params']['brands'] = $this->Brand->find('list');
+			$account['params']['models'] = $this->Model->find('list');
+			$account['params']['branches'] = $this->Branch->find('list');
+
+		$this->log($account,'account');
+		$this->set('data',$account);
+		$this->layout='ajax';
+		$this->render('/common/json');
+
+	}
+
+	function accounting_paidinstallment(){
+
+
+		$this->log($this->data,'accountdue');
+
+		$this->AccountTransaction->recursive = -1;
+		$accountTrans = $this->AccountTransaction->find('first',array(
+			'conditions'=>array(			
+				'AccountTransaction.id'=>$this->data['Account_Transaction_id']
+			)));
+
+			$date = date('d',strtotime($accountTrans['AccountTransaction']['due_date']));
+			
+			$dueDate = date('Y-m-d',strtotime($this->data['year'].'-'.$this->data['month'].'-'.$date));
+		
+		$accountT = array();
+		if($accountTrans && $accountTrans['AccountTransaction']['due_date'] <= $dueDate){
+
+			$this->AccountTransactionDetail->recursive = -1;
+			$accountT = $this->AccountTransactionDetail->find('first',array(
+				'conditions'=>array(			
+					array('AccountTransactionDetail.account_transaction_id'=>$this->data['Account_Transaction_id']),
+					array('AccountTransactionDetail.type'=>2),
+					array('AccountTransactionDetail.due_date'=>$dueDate),					
+				)
+			));	
+			
+			if(!empty($accountT)){
+
+				$this->AccountTransactionDetail->create();
+				$accountT2['AccountTransactionDetail'] = array(
+						'account_transaction_id'=>$this->data['Account_Transaction_id'],
+						'type'=>1,
+						'due_date'=>$dueDate,						
+						'payment_date'=>$this->data['payment_date'],
+						'or_number'=>$this->data['or_number'],
+						'discount'=>$this->data['discount'],
+						'payment_amount'=>$this->data['payment_amount'],
+						'parent_id'=>$accountT['AccountTransactionDetail']['id'],
+				);
+
+				if($this->AccountTransactionDetail->save($accountT2)){
+					
+				}
+
+			}
+			
+		}
+
+		if(!empty($accountT)){
+			$this->savewithcompute($accountTrans['AccountTransaction']['person_account_id']);
+			$accountT['success'] = true;
+		}
+		else
+			$accountT['success'] = false;
+
+		
+		$this->set('data',$accountT);
+		$this->layout='ajax';
+		$this->render('/common/json');
+
+	}
+
+	function accounting_getAccountDueInfo(){
+
+		$this->AccountTransaction->recursive = -1;
+		$accountTrans = $this->AccountTransaction->find('first',array(
+			'conditions'=>array(			
+				'AccountTransaction.id'=>$this->data['Account_Transaction_id']
+			)));
+
+			$date = date('d',strtotime($accountTrans['AccountTransaction']['due_date']));
+			
+			$dueDate = date('Y-m-d',strtotime($this->data['year'].'-'.$this->data['month'].'-'.$date));
+		
+		$accountT = array();
+		if($accountTrans && $accountTrans['AccountTransaction']['due_date'] <= $dueDate){
+
+			$this->AccountTransactionDetail->recursive = -1;
+			$accountT = $this->AccountTransactionDetail->find('first',array(
+				'conditions'=>array(			
+					array('AccountTransactionDetail.account_transaction_id'=>$this->data['Account_Transaction_id']),
+					array('AccountTransactionDetail.type'=>2),
+					array('AccountTransactionDetail.due_date'=>$dueDate),					
+				)
+			));	
+			
+			if(empty($accountT)){
+
+				$this->AccountTransactionDetail->create();
+				$accountT['AccountTransactionDetail'] = array(
+						'account_transaction_id'=>$this->data['Account_Transaction_id'],
+						'type'=>2,
+						'due_date'=>$dueDate,
+						'amount_due'=>$accountTrans['AccountTransaction']['installment_amount'],
+				);
+
+				if($this->AccountTransactionDetail->save($accountT)){
+					$accountT['AccountTransactionDetail']['id'] = $this->AccountTransactionDetail->id;
+				}
+
+			}
+
+			$this->AccountTransactionDetail->recursive = -1;
+			$accountT1 = $this->AccountTransactionDetail->find('all',array(
+				'conditions'=>array(			
+					array('AccountTransactionDetail.account_transaction_id'=>$this->data['Account_Transaction_id']),
+					array('AccountTransactionDetail.type'=>1),
+					array('AccountTransactionDetail.due_date'=>$dueDate),					
+					array('AccountTransactionDetail.parent_id'=>$accountT['AccountTransactionDetail']['id']),
+				)
+			));	
+
+				$accountT['AccountTransactionDetail']['balance'] = $accountT['AccountTransactionDetail']['amount_due'] + $accountT['AccountTransactionDetail']['interest'];
+
+			if(!empty($accountT1)){
+				$accountT['Payments'] = $accountT1;
+				foreach ($accountT1 as $T1key => $T1value) {					
+					$this->log($T1value,'T1value');
+					$accountT['AccountTransactionDetail']['balance'] = $accountT['AccountTransactionDetail']['balance'] - ($T1value['AccountTransactionDetail']['payment_amount'] + $T1value['AccountTransactionDetail']['discount']);
+				}
+				
+			}
+			
+		}
+
+		if(!empty($accountT)){
+			$this->savewithcompute($accountTrans['AccountTransaction']['person_account_id']);
+			$accountT['success'] = true;
+		}
+		else
+			$accountT['success'] = false;
+
+		
+		$this->set('data',$accountT);
+		$this->layout='ajax';
+		$this->render('/common/json');
+
+	}
+
+	function accounting_saveInterest(){
+		$this->log($this->data,'saveInterest');
+
+		if(!empty($this->data['id']))
+			$this->AccountTransactionDetail->save($this->data);
+
+		$data['success'] = true;
+
+		$this->set('data',$data);
+		$this->layout='ajax';
+		$this->render('/common/json');
+
+	}
+	function accounting_report_monthly(){
+
+		
+
+		
+		$datenow = Date('Y-m-d');
+		$data = array();
+
+		for ($i=1; $i < 31 ; $i++) { 
+
+			$current = date('Y-m-d',strtotime($this->data['year'].'-'.$this->data['month'].'-'.$i));
+			$data [$current] = array();
+			// echo $current;
+			$branch_id = $this->data['branch_id'];
+			$query = "
+				select * from (
+					select A.*, BB.* from (
+						select 
+							'InsUpdate' as 'label_Type',a.person_account_id,b.or_number as 'label_OR',b.payment_amount as 'label_AmountR',b.discount as 'label_AmountPPD',b.payment_date as 'labelpaymentdate','' as 'labelremarks'
+						from 
+							account_transactions a join account_transaction_details b on a.id = b.account_transaction_id
+							where a.collection_type_id = 2 and b.type = 1 and b.payment_date = '{$current}' and a.branch_id = '{$branch_id}'
+						union
+
+						select 
+							'InsDown' as 'label_Type',a.person_account_id,a.down_payment_or as 'label_OR',a.down_payment as 'label_AmountR',0 as 'label_AmountPPD',a.down_payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+						from 
+							account_transactions a  where a.collection_type_id = 2 and a.down_payment_date = '{$current}' and a.branch_id = '{$branch_id}'
+						union
+
+						select 
+							'Cash' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+						from 
+							account_transactions a  where a.collection_type_id = 1 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'					
+						union
+						select 
+							'Others' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+						from 
+							account_transactions a  where a.collection_type_id = 4 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'
+						union					
+
+						select 
+							'Disbursement' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+						from 
+							account_transactions a  where a.collection_type_id = 5 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'
+					) A join accounts BB on A.person_account_id = BB.id
+				) Final			    
+				";	
+
+			$finalReport = $this->AccountTransaction->query($query);	
+			foreach ($finalReport as $finalkey => $finalvalue) {
+				$data [$current] [$finalvalue['Final']['label_Type']] ['amount'] += $finalvalue['Final']['label_AmountR'];
+				$data [$current] [$finalvalue['Final']['label_Type']] ['ppd'] += $finalvalue['Final']['label_AmountPPD'];
+			}
+		}
+		
+		
+		$this->set('data',$data);
+		$this->set('filterBranches',$this->Branch->find('list'));
+		$this->set('month',$this->month());
+		$this->set('year',$this->year());
+
+		if($this->data['print']){
+			$this->layout = 'pdf';
+			$this->render('accounting_report_monthly_print');
+		}
+		
+	}
+
+	function accounting_getDepositSlipInfo(){
+		$this->log($this->data,'getDepositSlipInfo');
+
+		
+		$current = date('Y-m-d',strtotime($this->data['date']));
+		$branch_id = $this->data['branch_id'];
+		$query = "
+			select * from (
+				select A.*, BB.* from (
+					select 
+						'InsUpdate' as 'label_Type',a.person_account_id,b.or_number as 'label_OR',b.payment_amount as 'label_AmountR',b.discount as 'label_AmountPPD',b.payment_date as 'labelpaymentdate','' as 'labelremarks'
+					from 
+						account_transactions a join account_transaction_details b on a.id = b.account_transaction_id
+						where a.collection_type_id = 2 and b.type = 1 and b.payment_date = '{$current}' and a.branch_id = '{$branch_id}'
+					union
+
+					select 
+						'InsDown' as 'label_Type',a.person_account_id,a.down_payment_or as 'label_OR',a.down_payment as 'label_AmountR',0 as 'label_AmountPPD',a.down_payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+					from 
+						account_transactions a  where a.collection_type_id = 2 and a.down_payment_date = '{$current}' and a.branch_id = '{$branch_id}'
+					union
+
+					select 
+						'Cash' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+					from 
+						account_transactions a  where a.collection_type_id = 1 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'					
+					union
+					select 
+						'Others' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+					from 
+						account_transactions a  where a.collection_type_id = 4 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'
+					union					
+
+					select 
+						'Disbursement' as 'label_Type',a.person_account_id,a.payment_or as 'label_OR',a.total_payment as 'label_AmountR',0 as 'label_AmountPPD',a.payment_date as 'labelpaymentdate',a.remarks as 'labelremarks'
+					from 
+						account_transactions a  where a.collection_type_id = 5 and a.payment_date= '{$current}' and a.branch_id = '{$branch_id}'
+				) A join accounts BB on A.person_account_id = BB.id
+			) Final			    
+			";	
+
+		$finalReport = $this->AccountTransaction->query($query);
+	
+		$amount = 0;
+		foreach ($finalReport as $finalkey => $finalvalue) {
+			if($finalvalue['Final']['label_Type'] == 'Disbursement')
+				$amount -= $finalvalue['Final']['label_AmountR'];
+			else
+				$amount += $finalvalue['Final']['label_AmountR'] + $finalvalue['Final']['label_AmountPPD'];
+		}
+
+		$data['amount']=number_format($amount,2);
+
+		$this->Branch->recursive = -1;
+		$data['branch']=$this->Branch->findbyId($this->data['branch_id']);
+
+		$this->loadModel('DepositSlip');
+		$data['DepositSlip'] = $this->DepositSlip->find('all',array(
+			'conditions'=>array('deposit_date'=>$current,'branch_id'=>$this->data['branch_id'])
+		));
+
+		$data['balance']=$amount;
+		if($data['DepositSlip'])
+			foreach ($data['DepositSlip'] as $depositkey => $depositvalue) {
+				$data['balance'] -= $depositvalue['DepositSlip']['deposit_amount'];
+			}
+		
+		if($data['balance'] == 0){
+			$data['balance_status'] ='Exact Deposit';
+		}
+		if($data['balance'] > 0){
+			$data['balance_status'] ='Short Deposit';
+		}
+		if($data['balance'] < 0){
+			$data['balance_status'] ='Over Deposit';
+		}
+
+		$data['success'] = true;
+
+		$this->set('data',$data);
+		$this->layout='ajax';
 		$this->render('/common/json');
 	}
 }

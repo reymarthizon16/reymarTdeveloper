@@ -6,7 +6,7 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <table width="100%" class="table table-striped table-bordered table-hover dataTables-example" >
+                <table width="100%" class="table table-striped table-bordered table-hover dataTables-example">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -16,14 +16,14 @@
                             <th>Mobile no.</th>
                             <th>Address</th>
                             <th>Branch</th>
-                           
+                            
                             <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $seq = 0;           
                         foreach ($accountTransactions as $accTkey => $accTvalue) { 
-                            if( $accTvalue['AccountTransaction']['collection_type_id'] == 2 && $accTvalue['AccountTransaction']['account_closed'] == 0 ){
+                            if( $accTvalue['AccountTransaction']['collection_type_id'] == 5 ){
                             ?>
                             <tr class="<?php if($seq % 2 == 0) echo "odd"; else echo "even"; ?> gradeX">
                                 <td><?php echo $accTvalue['AccountTransaction']['id'] ?></td>
