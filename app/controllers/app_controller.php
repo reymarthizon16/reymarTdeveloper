@@ -197,8 +197,8 @@ class AppController extends Controller {
 	function year(){
 
 		$year = array();
-		// $year['2016'] = "2016";
-		// $year['2017'] = "2017";
+		$year['2016'] = "2016";
+		$year['2017'] = "2017";
 		$year['2018'] = "2018";
 		$year['2019'] = "2019";
 		$year['2020'] = "2020";

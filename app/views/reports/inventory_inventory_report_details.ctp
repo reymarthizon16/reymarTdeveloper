@@ -133,7 +133,7 @@
                                         <td><?php echo $Bvalue['serial_no'] ?></td>    
                                         <td>1</td>
                                         <td><?php echo $Bvalue['net_price'] ?></td>   
-                                        <?php if(isset($stockOut[$Bvalue['serial_no']])){ ?> 
+                                        <?php if(isset($stockOut[$Bvalue['serial_no']]) && $stockOut[$Bvalue['serial_no']]['stock_datetime'] > $fbranchvalue['receiving_datetime']){ ?> 
                                             <td><?php echo $stockOut[$Bvalue['serial_no']]['stock_datetime']; ?></td>
                                             <?php if($stockOut[$Bvalue['serial_no']]['type']==1){ ?>
                                                 <td><?php echo $stockOut[$Bvalue['serial_no']]['stock_transfer_no']; ?></td>
