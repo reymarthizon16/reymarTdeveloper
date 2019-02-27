@@ -149,7 +149,7 @@ class ReportsController extends AppController {
 		$stockInFromBranchQuery = "
 		select * from (
 			select 
-				b.model_id,a.from_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+				b.model_id,a.from_branch_id as branch_id,count( b.serial_no ) as total
 			 from 
 				receiving_transaction_details a 
 				join receiving_transactions aa on a.receiving_transaction_id = aa.id
@@ -176,7 +176,7 @@ class ReportsController extends AppController {
 		$stockInToCustomerQuery = "			
 		select * from (
 			select 
-				b.collection_type_id,model_id,b.delivery_datetime,count( distinct(c.serial_no) ) as total
+				b.collection_type_id,model_id,b.delivery_datetime,count( c.serial_no ) as total
 			from 
 				sold_transaction_details a 
 			    join sold_transactions b on a.sold_transaction_id = b.id
@@ -200,7 +200,7 @@ class ReportsController extends AppController {
 		$stockInToBranchQuery = "
 		select * from (
 			select 
-				b.model_id,aa.to_branch_id as branch_id,count( distinct(b.serial_no) ) as total
+				b.model_id,aa.to_branch_id as branch_id,count( b.serial_no ) as total
 			 from 
 				stock_transfer_transaction_details a join
 			    items b on a.serial_no = b.serial_no join
