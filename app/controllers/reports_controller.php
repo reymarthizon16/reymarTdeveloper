@@ -193,7 +193,7 @@ class ReportsController extends AppController {
 		$stockInToCustomer = $this->Model->query($stockInToCustomerQuery);
 
 		foreach ($stockInToCustomer as $tmpkey => $tmpvalue) {
-			$data['stockInToCustomer'] [ $tmpvalue['Reports']['model_id'] ]  [ $tmpvalue['Reports']['collection_type_id'] ]= $tmpvalue['Reports']['total']; 
+			$data['stockInToCustomer'] [ $tmpvalue['Reports']['model_id'] ]  [ $tmpvalue['Reports']['collection_type_id'] ] ['total']= $tmpvalue['Reports']['total']; 
 			$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
 		}
 
@@ -219,7 +219,7 @@ class ReportsController extends AppController {
 
 		
 		foreach ($stockInToBranch as $tmpkey => $tmpvalue) {
-			$data['stockInToBranch'] [ $tmpvalue['Reports']['model_id'] ] [ $tmpvalue['Reports']['branch_id'] ] = $tmpvalue['Reports']['total'];
+			$data['stockInToBranch'] [ $tmpvalue['Reports']['model_id'] ] [ $tmpvalue['Reports']['branch_id'] ] ['total'] = $tmpvalue['Reports']['total'];
 			$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
 		}
 
