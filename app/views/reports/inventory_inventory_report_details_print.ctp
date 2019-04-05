@@ -138,7 +138,7 @@
                             <td style="text-align: center;" ><?php echo $fbranchvalue['receiving_datetime'] ?></td>
                             <td style="text-align: center;" ><?php echo $fbranchvalue['reference_no'] ?></td>
                             <td style="text-align: center;" ><?php echo $fbranchvalue['receiving_report_no'] ?></td>
-                            <td style="text-align: center;" ><?php echo $fbranchvalue['company'] ?></td>
+                            <td style="text-align: center;" ><?php echo $fbranchvalue['branch'] ?></td>
                         <?php }else{ ?>
                             <td style="text-align: center;" > '' </td>
                             <td style="text-align: center;" > '' </td>

@@ -17,7 +17,7 @@ class StoragesController extends AppController {
 		else
 			$branches = $this->Branch->find('list',array('conditions'=>array('enabled'=>true)));
 
-		$models = $this->Model->find('list',array('conditions'=>array('enabled'=>true)));
+		$models = $this->Model->find('list',array('conditions'=>array('enabled'=>true),'order by'=>'name'));
 		$modelBrands = $this->Model->find('list',array('fields'=>array('id','brand_id'),'conditions'=>array('enabled'=>true)));
 		$types = $this->Type->find('list',array('conditions'=>array('enabled'=>true)));
 		$brands = $this->Brand->find('list',array('conditions'=>array('enabled'=>true)));

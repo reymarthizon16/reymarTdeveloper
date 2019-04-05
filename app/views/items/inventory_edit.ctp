@@ -12,8 +12,8 @@
             <fieldset>
                 <?php echo $this->element('common/createforms');?>
                 <?php 
-                if( $this->data['Item']['status']==1 || $this->data['Item']['status']==5)
-                    echo $this->Form->input('status',array('type'=>'select','options'=>array('1'=>'Neutral','5'=>'Reposes'))); 
+                // if( $this->data['Item']['status']==1 || $this->data['Item']['status']==5)
+                    // echo $this->Form->input('status',array('type'=>'select','options'=>array('1'=>'Neutral','5'=>'Reposes'))); 
                     ?>
                 <?php echo $this->Form->input('started_branch_id',array('empty'=>'Select Branch')); ?>
                 <?php echo $this->Form->input('change_branch',array('value'=>1,'type'=>'checkbox')); ?>

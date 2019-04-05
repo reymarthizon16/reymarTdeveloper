@@ -134,6 +134,7 @@ class Item extends AppModel {
 		3 => 'Sold',
 		4 => 'Defective',
 		5 => 'Reposes',
-		6 => 'Service Center'
+		6 => 'Service Center',
+		7 => 'Pull Out',
 	);
 }

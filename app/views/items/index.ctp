@@ -40,9 +40,16 @@
                                 <input type="checkbox" name="data[item_filter][Item.status][]" 
                                 <?php 
                                     if(!empty($this->data['item_filter']['Item.status']))
+                                        if(in_array("4",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
+                                    value="4">Defect
+                            </label>
+                            <!-- <label class="checkbox-inline">
+                                <input type="checkbox" name="data[item_filter][Item.status][]" 
+                                <?php 
+                                    if(!empty($this->data['item_filter']['Item.status']))
                                         if(in_array("5",$this->data['item_filter']['Item.status'])){echo "checked";} ?> 
                                     value="5">REPOSES
-                            </label>
+                            </label> -->
                             <label class="checkbox-inline">
                                 <input type="checkbox" name="data[item_filter][Item.status][]" 
                                 <?php 

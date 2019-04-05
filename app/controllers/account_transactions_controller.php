@@ -10,7 +10,7 @@ class AccountTransactionsController extends AppController {
 	}
 
 	function index() {
-		$this->AccountTransaction->recursive = 0;
+		// $this->AccountTransaction->recursive = 0;
 		$this->set('accountTransactions', $this->paginate());
 
 		$this->set('branches',$this->Branch->find('list'));

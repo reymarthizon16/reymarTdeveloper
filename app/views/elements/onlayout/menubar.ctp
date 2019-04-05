@@ -60,6 +60,9 @@
                     <li>
                         <a href="/<?php echo $this->params['prefix'] ?>/reports/inventory_report_details">Inventory Report Detail</a>
                     </li>                 
+                    <li>
+                        <a href="/<?php echo $this->params['prefix'] ?>/reports/sales_report">Monthly Sales Report</a>
+                    </li>                 
                 </ul>
                 <!-- /.nav-second-level -->
             </li>

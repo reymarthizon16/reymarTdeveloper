@@ -41,23 +41,23 @@
                 <table id="tableToExport" class="table table-striped table-bordered table-hover" style="font-size:10px;">
                 	<thead class="thcenter">
                         <tr>
-                            <th colspan="<?php echo 2+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 20px;">
+                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 20px;">
                                 Inventory Report ( <?php echo $filterBranches[$this->data['branch_id']] ?> )
                             </th>
                         </tr>
                         <tr>
-                            <th colspan="<?php echo 2+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 12px;">
+                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 12px;">
                                 Start Date : <?php echo $this->data['start_date']; ?> &nbsp; &nbsp; &nbsp; End Date : <?php echo $this->data['end_date']; ?>        
                             </th>
                         </tr>
                 		<tr>
-                			<th></th>
+                			<th colspan="2"></th>
                 			<th colspan="<?php echo count($branches)+3; ?>" >STOCK IN FROM</th>
                 			<th colspan="<?php echo count($branches)+3; ?>" >STOCK IN TO</th>
                             <th></th>
                 		</tr>
                 		<tr>
-                			<th colspan="4"></th>
+                			<th colspan="5"></th>
                 			<th colspan="<?php echo count($branches); ?>" >BRANCH</th>
                 			<th colspan="3" >Customer</th>
                 			<th colspan="<?php echo count($branches); ?>" >BRANCH</th>
@@ -66,6 +66,7 @@
                 		<tr>
                 			<th>Model</th>     
                 			<th>Prev</th>
+                            <th>Prev(repo)</th>
                             <th>Customer(repo)</th>
                 			<th>Delivered</th>
                 			
@@ -93,7 +94,9 @@
 	                		<tr>
 	                			<td style="text-align: left;"><?php echo $modelsvalue; ?></td>
                                 <td><?php echo $data['prevStock'][$models_id]['total']; $in += $data['prevStock'][$models_id]['total']; 
-                                 $total['prevStock'] += $data['prevStock'][$models_id]['total']; ?></td>                                
+                                 $total['prevStock'] += $data['prevStock'][$models_id]['total']; ?></td>
+                                <td><?php echo $data['prevRepo'][$models_id]['total']; $in += $data['prevRepo'][$models_id]['total']; 
+                                 $total['prevRepo'] += $data['prevRepo'][$models_id]['total']; ?></td>
                                 <td><?php echo $data['repoStock'][$models_id]['total']; $in += $data['repoStock'][$models_id]['total']; 
                                  $total['repoStock'] += $data['repoStock'][$models_id]['total']; ?></td>
 	                			<td><?php echo $data['deliveryStock'][$models_id]['total']; $in += $data['deliveryStock'][$models_id]['total']; 
@@ -127,6 +130,7 @@
                 		<tr>
                             <td>TOTAL</td>
                             <td><?php echo $total['prevStock']; ?></td>
+                            <td><?php echo $total['prevRepo']; ?></td>
                             <td><?php echo $total['repoStock']; ?></td>
                             <td><?php echo $total['deliveryStock']; ?></td>
                             <?php foreach ($branches as $branch_id => $branchesvalue) {

@@ -79,8 +79,8 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'yowmamin',
 		'password' => 'yowmamin',
+		'database' => 'citytrustlive',
 		// 'database' => 'citytrust_acc',
-		'database' => 'citytrust_test3',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
@@ -91,7 +91,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'yowmamin',
 		'password' => 'yowmamin',
-		'database' => 'city_trust_live',
+		'database' => 'citytrustlive',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

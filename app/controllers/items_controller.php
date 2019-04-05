@@ -47,10 +47,6 @@ class ItemsController extends AppController {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.', true));
 			}*/
 			
-			$statusUpdate = '';
-			if( $this->data['Item']['status']==1 || $this->data['Item']['status']==5){
-				$statusUpdate = " b.status = '".$this->data['Item']['status']."', a.status = '".$this->data['Item']['status']."', ";
-			}
 			$started_branch_idUpdate='';
 			if(!empty($this->data['Item']['started_branch_id']) && $this->data['Item']['change_branch'] == 1 )
 				$started_branch_idUpdate=" b.branch_id='".$this->data['Item']['started_branch_id']."' ,  a.started_branch_id='".$this->data['Item']['started_branch_id']."', ";
@@ -67,7 +63,7 @@ class ItemsController extends AppController {
 					left join stock_transfer_transaction_details stfold on a.serial_no = stfold.replaced_serial_no
 					left join items fnew on a.serial_no = fnew.new_serial_no
 					set
-						{$statusUpdate}
+						
 						{$started_branch_idUpdate}
 						a.serial_no = '{$this->data['Item']['serial_no']}',
 						a.model_id = '{$this->data['Item']['model_id']}',
@@ -75,6 +71,7 @@ class ItemsController extends AppController {
 						a.type_id = '{$this->data['Item']['type_id']}',
 						a.srp_price = '{$this->data['Item']['srp_price']}',
 						a.net_price = '{$this->data['Item']['net_price']}',
+						a.is_reposes = '{$this->data['Item']['is_reposes']}',
 
 						b.serial_no = '{$this->data['Item']['serial_no']}',
 
@@ -187,6 +184,7 @@ class ItemsController extends AppController {
 
 			$this->data['Item']['entry_datetime'] = date('Y-m-d H:i:s',strtotime($this->data['Item']['entry_datetime']));
 			$this->data['Item']['started_branch_id'] = $this->data['Item']['branches'];
+			$this->data['Item']['enabled'] = true;
 
 			if ($this->Item->save($this->data)) {
 

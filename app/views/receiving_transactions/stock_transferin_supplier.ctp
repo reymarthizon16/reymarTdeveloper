@@ -36,9 +36,9 @@
                         <label class="radio-inline">
                             <input type="radio" name="data[ReceivingTransaction][type]" id="ReceivingTransactionTypeId" class="ReceivingTransactionType" value="2" <?php echo $this->data['ReceivingTransaction']['type']==2?"checked":""; ?> <?php echo $disableType; ?> >From Stock Transfer
                         </label>
-                        <label class="radio-inline">
+                       <!--  <label class="radio-inline">
                             <input type="radio" name="data[ReceivingTransaction][type]" id="ReceivingTransactionTypeId" class="ReceivingTransactionType" value="5" <?php echo $this->data['ReceivingTransaction']['type']==5?"checked":""; ?> <?php echo $disableType; ?> >From Customer (reposes)
-                        </label>
+                        </label> -->
                          <label class="radio-inline">
                             <input type="radio" name="data[ReceivingTransaction][type]" id="ReceivingTransactionTypeId" class="ReceivingTransactionType" value="4" <?php echo $this->data['ReceivingTransaction']['type']==4?"checked":""; ?> <?php echo $disableType; ?> >From Customer (on repair)
                         </label>

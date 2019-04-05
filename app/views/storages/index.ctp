@@ -82,7 +82,7 @@
                                                                     if(in_array("2",$this->data['branch_filter'][$branchkey]['storage.status'])){echo "checked";} ?> 
                                                                 value="2">ON DELIVERY
                                                         </label>
-                                                        <label class="checkbox-inline">
+                                                        <!-- <label class="checkbox-inline">
                                                             <input type="checkbox" name="data[branch_filter][<?php echo $branchkey?>][storage.status][]" 
                                                             <?php 
                                                                 if(!empty($this->data['branch_filter'][$branchkey]['storage.status']))
@@ -96,8 +96,16 @@
                                                                     if(in_array("6",$this->data['branch_filter'][$branchkey]['storage.status'])){echo "checked";} ?> 
                                                                 value="6">Service Center
                                                         </label>
+                                                         -->
+                                                         <label class="checkbox-inline">
+                                                            <input type="checkbox" name="data[branch_filter][<?php echo $branchkey?>][storage.status][]" 
+                                                            <?php 
+                                                                if(!empty($this->data['branch_filter'][$branchkey]['storage.status']))
+                                                                    if(in_array("4",$this->data['branch_filter'][$branchkey]['storage.status'])){echo "checked";} ?> 
+                                                                value="6">DEFECT
+                                                        </label>
                                                     </div>
-                                                    <div class="form-group" style="">
+                                                  <!--   <div class="form-group" style="">
                                                         <label>Model</label>
                                                         <?php foreach ($models as $key => $value) { ?>
                                                              <label class="checkbox-inline" style="">
@@ -129,7 +137,7 @@
                                                                         if(in_array($key,$this->data['branch_filter'][$branchkey]['type_id'])){echo "checked";} ?> value="<?php echo $key; ?>"><?php echo $value; ?>
                                                             </label>
                                                         <?php } ?>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <button class="showfilter btn btn-primary">Show Filter</button>
                                                 <button type="submit" class="btn btn-primary">Filter</button>
@@ -157,6 +165,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <?php //debug($storages);
+                                                    $summary = array();
                                                     if(!empty($storages[$branchkey]))
                                                     foreach ($storages[$branchkey] as $storageskey => $storagesvalue) { ?>
                                                         
@@ -165,6 +174,12 @@
                                                             <td><?php echo $brands[$storagesvalue['Item']['brand_id']] ?></td>                                                
                                                             <td><?php echo $types[$storagesvalue['Item']['type_id']] ?></td>                                                
                                                             <td><?php echo $models[$storagesvalue['Item']['model_id']] ?></td>
+                                                            <?php 
+                                                                if(!isset($summary[$storagesvalue['Item']['model_id']]))
+                                                                    $summary[$storagesvalue['Item']['model_id']]['total'] = 0;
+
+                                                                $summary[$storagesvalue['Item']['model_id']]['total'] += 1; 
+                                                            ?>
                                                             <td><?php echo $storagesvalue['Item']['serial_no'] ?></td>
                                                             <td class="center"><?php echo $storagesvalue['Item']['quantity'] ?></td>
                                                             <td class="center"><?php echo $storagesvalue['Item']['srp_price'] ?></td>
@@ -215,6 +230,16 @@
                                             
                                            <h4>Total SRP:  <strong><?php echo number_format($branchkeyTotal[$branchkey]['srp'],2); ?> </strong></h4>
                                            <h4>Total NET: <strong><?php echo number_format($branchkeyTotal[$branchkey]['net'],2); ?> </strong></h4>
+                                           <h4 style="text-align: center;">Summary</h4>
+                                           <div>
+                                               <?php foreach ($models as $modelskey => $modelsvalue) {
+                                                    if( $summary[$modelskey]['total'] > 0 ){
+                                                        echo '<div style="width:350px;float:left">';
+                                                        echo $modelsvalue.'('.$summary[$modelskey]['total'].')';
+                                                        echo '</div>';
+                                                    }
+                                               } ?>
+                                           </div>
                                         </div>
                                         <!-- /.panel-body -->
                                     </div>

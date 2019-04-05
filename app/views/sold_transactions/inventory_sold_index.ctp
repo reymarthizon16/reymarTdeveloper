@@ -63,7 +63,7 @@
                                             <td><?php echo $items[$rtdvalue['serial_no']]['srp_price'] ?></td>
                                             <td><?php echo $items[$rtdvalue['serial_no']]['net_price'] ?></td>                                            
                                             <td><?php echo $items[$rtdvalue['serial_no']]['sold_price'] ?></td>                                            
-                                            <td><?php echo $rtdvalue['reposes']=1?"Yes":''; ?></td>
+                                            <td><?php echo $rtdvalue['reposes']==1?"Yes":''; ?></td>
                                             <td><?php echo $rtdvalue['reposes_datetime'] ?></td>
                                         </tr>    
                                     <?php } ?>

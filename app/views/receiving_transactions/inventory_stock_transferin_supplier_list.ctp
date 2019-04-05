@@ -18,7 +18,7 @@
                 <ul class="nav nav-tabs">
                     <li class="<?php echo $_SESSION['type']==1?'active':''; ?>"><a href="#fromSupplier" data-toggle="tab">From Supplier</a></li>
                     <li class="<?php echo $_SESSION['type']==2?'active':''; ?>"><a href="#fromStockTransfer" data-toggle="tab">From Stock Transfer</a></li>
-                    <li class="<?php echo $_SESSION['type']==5?'active':''; ?>"><a href="#fromCustomer" data-toggle="tab">From Customer (reposes)</a></li>
+                    <!-- <li class="<?php echo $_SESSION['type']==5?'active':''; ?>"><a href="#fromCustomer" data-toggle="tab">From Customer (reposes)</a></li> -->
                     <li class="<?php echo $_SESSION['type']==4?'active':''; ?>"><a href="#fromCustomerOnRepair" data-toggle="tab">From Customer (on repair)</a></li>
                 </ul>
 
@@ -158,7 +158,7 @@
                             <hr />
                         <?php }} ?>
                     </div>
-
+<!-- 
                     <div class="tab-pane fade  <?php echo $_SESSION['type']==5?'in active':''; ?>" id="fromCustomer">
                          <?php echo $this->Form->create('ReceivingTransaction');?>
                             <div class="row">
@@ -170,7 +170,7 @@
                                 <div class="col-lg-2"> 
                                 End Date Received : <?php echo $this->Form->input('filter.end_date',array('class'=>'datepicker','label'=>false,'type'=>'text','value'=>$filter['end_date'])); ?> </div>
                                 <div class="col-lg-2" style="padding-top: 15px;">
-                                      <!-- <button type="reset" class="btn btn-success">Reset</button>   -->
+                                   
                                       <button type="submit" class="btn btn-success">Filter</button>  
                                       <button type="submit" name="data[print]" value="" id="printPleaseTwo" class="btn btn-success print">Print</button>
                                 </div>
@@ -227,7 +227,7 @@
 
                 
                     </div>
-
+ -->
                      <div class="tab-pane fade  <?php echo $_SESSION['type']==4?'in active':''; ?>" id="fromCustomerOnRepair">
                          <?php echo $this->Form->create('ReceivingTransaction');?>
                             <div class="row">

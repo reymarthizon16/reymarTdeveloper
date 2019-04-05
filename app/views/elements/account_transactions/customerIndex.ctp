@@ -13,10 +13,11 @@
                             <th>Account No.</th>
                             <th>DR No.</th>
                             <th>Fullname</th>
-                            <th>Mobile no.</th>
-                            <th>Address</th>
+                            <!-- <th>Mobile no.</th>
+                            <th>Address</th> -->
                             <th>Branch</th>
-                           
+                            <th>Payment/Downpayment OR'S</th>
+                            <th>Montly OR'S</th>
                             <th>ACTION</th>
                         </tr>
                     </thead>
@@ -30,10 +31,22 @@
                                 <td><?php echo $accTvalue['AccountTransaction']['transaction_account_number'] ?></td>
                                 <td><?php echo $accTvalue['AccountTransaction']['transaction_dr_no'] ?></td>
                                 <td><?php echo $accountCustomers[$accTvalue['AccountTransaction']['person_account_id']]['full_name'] ?></td>
-                                <td><?php echo $accountCustomers[$accTvalue['AccountTransaction']['person_account_id']]['mobile_no'] ?></td>
-                                <td><?php echo $accountCustomers[$accTvalue['AccountTransaction']['person_account_id']]['address'] ?></td>
+                                <!-- <td><?php echo $accountCustomers[$accTvalue['AccountTransaction']['person_account_id']]['mobile_no'] ?></td>
+                                <td><?php echo $accountCustomers[$accTvalue['AccountTransaction']['person_account_id']]['address'] ?></td> -->
                                 <td><?php echo $branches[$accTvalue['AccountTransaction']['branch_id']] ?></td>
-                                
+                                <td>
+                                    <?php echo $accTvalue['AccountTransaction']['payment_or']; ?>/
+                                    <?php echo $accTvalue['AccountTransaction']['down_payment_or']; ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                    if(!empty($accTvalue['AccountTransactionDetail'])){
+                                        foreach ($accTvalue['AccountTransactionDetail'] as $acctdetkey => $acctdetvalue) {
+                                            if(!empty($acctdetvalue['or_number']))
+                                            echo $acctdetvalue['or_number']." ";
+                                        }
+                                    } ?>
+                                </td>
                                 <td  class="center">
                                     <button type="button" onclick="window.location.href='/accounting/account_transactions/edit/<?php echo $accTvalue['AccountTransaction']['person_account_id']; ?>/<?php echo $accTvalue['AccountTransaction']['id']; ?>'"  class="btn btn-primary btn-circle btn-lg"><i class="fa fa-list"></i></button>
                                 </td>

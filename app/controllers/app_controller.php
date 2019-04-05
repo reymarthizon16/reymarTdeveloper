@@ -5,6 +5,24 @@ class AppController extends Controller {
 	
 	var $uses=array();
 	
+	function getTableDescQueryString($table_name,$notin = array()){
+
+		$notinString = "";
+		if(!empty($notin)){
+			$implode = "'" . implode ( "', '", $notin ) . "'";
+			$notinString = "AND COLUMN_NAME not in (".$implode.")";
+			// $notinString = implode("','",$notin);
+		}
+
+		$query = "select * from (
+			SELECT TABLE_NAME,COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT , COLUMN_KEY
+			  FROM INFORMATION_SCHEMA.COLUMNS
+			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrustlive' 
+			  ".$notinString."
+			) TableDesc";
+		// $this->log($query,'Mainquery');
+		return $query;
+	}
 
 	function beforeFilter()
 	{
@@ -73,24 +91,7 @@ class AppController extends Controller {
 		return false;  
 	}
 
-	function getTableDescQueryString($table_name,$notin = array()){
-
-		$notinString = "";
-		if(!empty($notin)){
-			$implode = "'" . implode ( "', '", $notin ) . "'";
-			$notinString = "AND COLUMN_NAME not in (".$implode.")";
-			// $notinString = implode("','",$notin);
-		}
-
-		$query = "select * from (
-			SELECT TABLE_NAME,COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT , COLUMN_KEY
-			  FROM INFORMATION_SCHEMA.COLUMNS
-			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrust_test3' 
-			  ".$notinString."
-			) TableDesc";
-		// $this->log($query,'Mainquery');
-		return $query;
-	}
+	
 	
 
 
