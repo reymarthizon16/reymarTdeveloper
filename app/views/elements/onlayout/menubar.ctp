@@ -48,6 +48,9 @@
                     <li>
                         <a href="/<?php echo $this->params['prefix'] ?>/sold_transactions/sold_index">Sales Transaction Reports</a>
                     </li>
+                    <li>
+                        <a href="/<?php echo $this->params['prefix'] ?>/pullout_transactions/pullout_index">Pullout Transaction Reports</a>
+                    </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>

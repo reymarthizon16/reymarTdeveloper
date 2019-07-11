@@ -114,11 +114,23 @@
                                 <?php if( $value['Item']['is_replaced'] != '1'){ ?>
                                     <button class="btn btn-primary btn-sm viewHistorybtn" data-serial="<?php echo $value['Item']['serial_no'] ?>" data-toggle="modal" data-target="#itemHistory">History</button>     
                                     <a class="btn btn-success btn-sm" href="/inventory/items/edit/<?php echo $value['Item']['serial_no'] ?>">Edit</a>
-                                <?php }else{ echo "Replaced by Serial <b style='color:red;'>".$value['Item']['new_serial_no'].""; }?>
+                                <?php }else{ echo "Replaced by Serial <b style='color:red;'>".$value['Item']['new_serial_no'].""; ?>
+                                    <button class="btn btn-primary btn-sm viewHistorybtn" data-serial="<?php echo $value['Item']['serial_no'] ?>" data-toggle="modal" data-target="#itemHistory">History</button>     
+                                <?php  } ?>
 
                                 <?php if( $value['Item']['status'] == '4' && !$value['Item']['is_repair']){ ?>
                                     <a class="btn btn-success btn-sm" href="/inventory/items/repair/<?php echo $value['Item']['serial_no'] ?>">HO Repair</a>
                                 <?php } ?>
+
+                                <?php if( !empty($value['Item']['old_serial_no'])){ ?>
+                                        <button class="btn btn-primary btn-sm viewHistorybtn" data-serial="<?php echo $value['Item']['old_serial_no'] ?>" data-toggle="modal" data-target="#itemHistory">Old Serial <?php echo $value['Item']['old_serial_no'] ?> History </button>     
+                                <?php } ?>
+
+
+                                <?php if( !empty($value['Item']['new_serial_no'])){ ?>
+                                        <button class="btn btn-primary btn-sm viewHistorybtn" data-serial="<?php echo $value['Item']['new_serial_no'] ?>" data-toggle="modal" data-target="#itemHistory">New Serial <?php echo $value['Item']['new_serial_no'] ?> History </button>     
+                                <?php } ?>                                
+                                <a class="btn btn-danger btn-sm" onclick="if (confirm('Are you sure you want to delete your post?')) window.location.href='/inventory/items/delete/<?php echo $value['Item']['serial_no'] ?>';" >Delete</a>
                             </td>
                         </tr>                       
                         <?php } ?>
@@ -155,6 +167,7 @@
                 </table>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal" data-serialno id="PrintHistory" >Print</button>                
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                
             </div>
         </div>
@@ -202,6 +215,7 @@
                     ];
 
             jQuery('#myModalLabel').text('History for Serial No '+jQuery(this).attr('data-serial'));
+            jQuery('#PrintHistory').attr('data-serialno',jQuery(this).attr('data-serial'));
 
             jQuery.ajax({
                 async:false,
@@ -217,7 +231,13 @@
                             console.log(value);
                             jQuery('#itemHistory table tbody').append('<tr><td>'+value.ItemHistory.note+'</td><td>'+value.ItemHistory.datetime+'</td></tr>');
                         });
-                      
+                        
+                        
+                        jQuery('#PrintHistory').unbind();
+                        jQuery('#PrintHistory').click(function(){
+                            window.open('/inventory/items/printhistory/'+jQuery(this).attr('data-serialno'), '_blank')
+                        });
+
                     }else{
                     
                     }

@@ -14,31 +14,78 @@ class ReportsController extends AppController {
 		$data = array();
 		$thisModelOnly = array();
 
-		$checking_model = '231';
+		// $checking_model = '87';
 		$b_model_checkString = '';
 		$c_model_checkString = '';
-		if($checking_model){
+		if($checking_model && false){
 			$b_model_checkString = " and b.model_id = '{$checking_model}' ";
 			$c_model_checkString = " and c.model_id = '{$checking_model}' ";
 
-			$b_model_checkString = " and b.model_id in (87,98,109) ";
-			$c_model_checkString = " and c.model_id in (87,98,109) ";
+			// $b_model_checkString = " and b.model_id in (87,98,109) ";
+			// $c_model_checkString = " and c.model_id in (87,98,109) ";
 		}
-	
+		
+		$removeReplaceQuery = "
+			select * from (				
+				select 
+					old_serial_no, a.receiving_datetime from 
+				receiving_transaction_details b 
+					join 
+				receiving_transactions a on a.id = b.receiving_transaction_id
+				where b.old_serial_no is not null and b.old_serial_no <> ''
+					and a.receiving_datetime <= '{$endDate}'
+			) remove
+		" ;
+
+		$removeReplace = $this->Model->query($removeReplaceQuery);
+
+		$removeSerialString = '';
+		$hascount=0;
+		foreach ($removeReplace as $removekey => $removevalue) {
+			$removeSerialString .= ",'".$removevalue['remove']['serial_no']."'";
+			$hascount++;
+		}
+
+		$removeSerialString = ltrim ($removeSerialString, ',');
+		
+		$bItems = '';
+		$cItems = '';
+
+		if($hascount > 0){
+			$bItems = ' and b.serial_no not in ( '.$removeSerialString.' ) ';
+			$cItems = ' and c.serial_no not in ( '.$removeSerialString.' ) ';
+		}
+		
 		$repoQuery = "
 		select * from (
 			
 			select 
-				b.model_id,concat('-',b.is_reposes,'-'),count( b.serial_no ) as total
+				b.model_id,concat('-',b.is_reposes,'-'),count( b.serial_no ) as total,rand()
 			 from 
 			 	
 				 items b 
 				join models c on c.id = b.model_id 
 				join branches d on d.id = b.started_branch_id
 			where 
-				( b.started_branch_id = '{$branchId}' and is_reposes = 1 and b.entry_datetime >= '{$startDate}' and b.entry_datetime <= '{$endDate}' {$b_model_checkString} )				
+				( b.started_branch_id = '{$branchId}' and is_reposes = 1 and b.entry_datetime >= '{$startDate}' and b.entry_datetime <= '{$endDate}' {$b_model_checkString} {$bItems} )				
 			group by b.model_id
 
+			union
+
+			select 
+					#b.model_id,a.from_branch_id as branch_id,count( b.serial_no ) as total
+					b.model_id,'-1-',count( b.serial_no ) as total,rand()
+				 from 
+					receiving_transaction_details a 
+					join receiving_transactions aa on a.receiving_transaction_id = aa.id
+					join items b on a.serial_no = b.serial_no 
+					join models c on c.id = b.model_id 
+					join branches d on d.id = a.to_branch_id
+				where 
+					a.confirmed = 1 and a.to_branch_id = '{$branchId}'
+					and aa.type = 5 and aa.receiving_datetime <= '{$endDate}'
+					{$b_model_checkString} {$bItems} 
+				group by b.model_id
 		)Reports
 		";		
 	$this->log($repoQuery,'repoQuery');
@@ -70,6 +117,7 @@ class ReportsController extends AppController {
 					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
 					and aa.type = 1 and aa.receiving_datetime < '{$startDate}'
 					{$b_model_checkString}
+					{$bItems}
 				group by b.model_id,a.from_branch_id,b.is_reposes
 				
 			union
@@ -87,6 +135,25 @@ class ReportsController extends AppController {
 					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
 					and aa.type = 2 and aa.receiving_datetime < '{$startDate}'
 					{$b_model_checkString}
+					{$bItems}
+				group by b.model_id,a.from_branch_id,b.is_reposes
+				
+			union
+
+				select 
+					#b.model_id,a.from_branch_id as branch_id,count( b.serial_no ) as total
+					b.is_reposes,b.model_id,a.to_branch_id as branch_id,'plus' as statuss ,count( b.serial_no ) as total,rand()
+				 from 
+					receiving_transaction_details a 
+					join receiving_transactions aa on a.receiving_transaction_id = aa.id
+					join items b on a.serial_no = b.serial_no 
+					join models c on c.id = b.model_id 
+					join branches d on d.id = a.to_branch_id
+				where 
+					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
+					and aa.type = 5 and aa.receiving_datetime < '{$startDate}'
+					{$b_model_checkString}
+					{$bItems}
 				group by b.model_id,a.from_branch_id,b.is_reposes
 				
 			union
@@ -99,9 +166,11 @@ class ReportsController extends AppController {
 					join items c on c.serial_no = b.serial_no
 				where 
 
-					a.type = 1 and a.from_branch_id ='{$branchId}' and b.confirm = 1
+					#a.type = 1 and comment for customer and SC
+					a.from_branch_id ='{$branchId}' and b.confirm = 1
 					and a.stock_transfer_datetime < '{$startDate}' 
 					{$c_model_checkString}
+					{$cItems}
 				group by c.model_id,a.from_branch_id,c.is_reposes
 				
 			union
@@ -117,6 +186,7 @@ class ReportsController extends AppController {
 					a.cancel = 0 and a.delivery_datetime < '{$startDate}' 
 					and b.from_branch_id = '{$branchId}'
 					{$c_model_checkString}
+					{$cItems}
 				group by c.model_id,b.from_branch_id,c.is_reposes
 
 			union
@@ -129,7 +199,7 @@ class ReportsController extends AppController {
 					join models c on c.id = b.model_id 
 					join branches d on d.id = b.started_branch_id
 				where 
-					( b.started_branch_id = '{$branchId}' and b.entry_datetime < '{$startDate}' and b.is_reposes = 1 {$b_model_checkString} )
+					( b.started_branch_id = '{$branchId}' and b.entry_datetime < '{$startDate}' and b.is_reposes = 1 {$b_model_checkString} {$bItems})
 				group by b.model_id,b.is_reposes,b.started_branch_id
 
 			union
@@ -142,7 +212,7 @@ class ReportsController extends AppController {
 					join models c on c.id = b.model_id 
 					join branches d on d.id = b.started_branch_id
 				where 
-					( b.started_branch_id = '{$branchId}' and b.entry_datetime <= '{$endDate}' and b.is_reposes = 0 {$b_model_checkString} )
+					( b.started_branch_id = '{$branchId}' and b.entry_datetime <= '{$endDate}' and b.is_reposes = 0 {$b_model_checkString} {$bItems})
 				group by b.model_id,b.is_reposes,b.started_branch_id
 
 			)Rep group by model_id,is_reposes
@@ -179,6 +249,7 @@ class ReportsController extends AppController {
 				a.confirmed = 1 and a.to_branch_id = '{$branchId}'
 				and aa.type = 1 and aa.receiving_datetime >= '{$startDate}' and aa.receiving_datetime <= '{$endDate}'
 				{$b_model_checkString}
+				{$bItems}
 			group by b.model_id,a.from_branch_id
 		)Reports
 		";
@@ -204,6 +275,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 				a.confirmed = 1 and a.to_branch_id = '{$branchId}'
 				and aa.type = 2 and aa.receiving_datetime >= '{$startDate}' and aa.receiving_datetime <= '{$endDate}'
 				{$b_model_checkString}
+				{$bItems}
 			group by b.model_id,a.from_branch_id
 		)Reports
 		";
@@ -228,6 +300,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 				b.cancel = 0 and b.delivery_datetime >= '{$startDate}' and b.delivery_datetime <= '{$endDate}'
 				and a.from_branch_id = '{$branchId}'
 				{$c_model_checkString}
+				{$cItems}
 			group by model_id,collection_type_id
 		)Reports
 			";
@@ -242,27 +315,38 @@ $this->log($deliveryQuery,'deliveryQuery');
 		$stockInToBranchQuery = "
 		select * from (
 			select 
-				b.model_id,aa.to_branch_id as branch_id,count( b.serial_no ) as total
+				aa.type,b.model_id,aa.to_branch_id as branch_id,count( b.serial_no ) as total
 			 from 
 				stock_transfer_transaction_details a join
 			    items b on a.serial_no = b.serial_no join
 				models c on c.id = b.model_id join
-			    stock_transfer_transactions aa on aa.id = a.stock_transfer_transaction_id join
+			    stock_transfer_transactions aa on aa.id = a.stock_transfer_transaction_id left join
 				branches d on d.id = aa.to_branch_id 
 			    
 			where 
 				a.confirm = 1 and aa.from_branch_id = '{$branchId}'
 				and aa.stock_transfer_datetime >= '{$startDate}' and aa.stock_transfer_datetime <= '{$endDate}'
 				{$b_model_checkString}
-			group by b.model_id,aa.to_branch_id
+				{$bItems}
+			group by b.model_id,aa.to_branch_id,aa.type
 		)Reports
 		";
 		$stockInToBranch = $this->Model->query($stockInToBranchQuery);
 
-		
+		$this->log($stockInToBranch,'stockInToBranch');
 		foreach ($stockInToBranch as $tmpkey => $tmpvalue) {
 			$data['stockInToBranch'] [ $tmpvalue['Reports']['model_id'] ] [ $tmpvalue['Reports']['branch_id'] ] ['total'] = $tmpvalue['Reports']['total'];
 			$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
+
+			if($tmpvalue['Reports']['type'] == 2){
+				$data['stockInToServiceCenter'] [ $tmpvalue['Reports']['model_id'] ] ['total'] = $tmpvalue['Reports']['total'];
+				$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
+			}
+
+			if($tmpvalue['Reports']['type'] == 3){
+				$data['stockInToCustomer'] [ $tmpvalue['Reports']['model_id'] ] ['total'] = $tmpvalue['Reports']['total'];
+				$thisModelOnly[ $tmpvalue['Reports']['model_id'] ] = $tmpvalue['Reports']['model_id'] ;
+			}
 		}
 
 		
@@ -274,7 +358,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 		$this->set('accounts',$this->Account->find('list'));
 
 		$this->set('filterBranches',$branch_idNs);
-// $this->log($data,'datadata');
+$this->log($data,'datadata');
 		$this->set('data',$data);
 		$this->set('thisModelOnly',$thisModelOnly);
 
@@ -289,6 +373,14 @@ $this->log($deliveryQuery,'deliveryQuery');
 		$branchId = $this->data['branch_id'];
 		$startDate = $this->data['start_date']." 00:00:00";
 		$endDate = $this->data['end_date']." 23:59:59";
+
+		$checking_model = '87';
+		$d_model_checkString = '';
+
+		if($checking_model){			
+			$d_model_checkString = " and d.model_id = '{$checking_model}' and d.serial_no = 'EDF-120010' ";
+			
+		}
 
 		$data = array();
 		$thisModelOnly = array();
@@ -306,6 +398,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 			    join models e on e.id = d.model_id
 				where a.type = 1 and b.to_branch_id ='{$branchId}' and b.confirmed = 1 
 					and a.receiving_datetime >= '{$startDate}' and a.receiving_datetime <= '{$endDate}'
+					{$d_model_checkString}
 				order by e.name asc
 		) Final
 		";
@@ -342,6 +435,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 			    join models e on e.id = d.model_id
 				where a.type = 2 and b.to_branch_id ='{$branchId}' and b.confirmed = 1
 					and a.receiving_datetime >= '{$startDate}' and a.receiving_datetime <= '{$endDate}'
+					{$d_model_checkString}
 				order by e.name asc
 		) Final
 		";
@@ -396,6 +490,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 			    join models e on e.id = d.model_id
 			where a.type = 1 and a.from_branch_id ='{$branchId}' and b.confirm = 1
 				and a.stock_transfer_datetime >= '{$startDate}' and a.stock_transfer_datetime <= '{$endDate}'
+				{$d_model_checkString}
 				order by e.name asc
 		) Final
 		";
@@ -412,6 +507,38 @@ $this->log($deliveryQuery,'deliveryQuery');
 			$stockOut[$final3value['Final']['serial_no']]['serial_no'] = $final3value['Final']['serial_no'];
 		}
 
+
+		// Stock Transfer Out
+		$query33 ="
+		select * from (
+			select 
+				a.stock_transfer_datetime,a.stock_transfer_no,c.company as company,e.name as model,d.serial_no,a.type
+			from 
+				stock_transfer_transactions a 
+			    join stock_transfer_transaction_details b on a.id = b.stock_transfer_transaction_id 
+			    join accounts c on c.id = a.service_account_id
+			    join items d on d.serial_no = b.serial_no
+			    join models e on e.id = d.model_id
+			where a.type = 2 and a.from_branch_id ='{$branchId}' and b.confirm = 1
+				and a.stock_transfer_datetime >= '{$startDate}' and a.stock_transfer_datetime <= '{$endDate}'
+				{$d_model_checkString}
+				order by e.name asc
+		) Final
+		";
+// $this->log($query33,'query33');
+		$final33 = $this->Model->query($query33);
+
+		$stockOut = array();
+		foreach ($final33 as $final33key => $final33value) {
+			$stockOut[$final33value['Final']['serial_no']]['stock_datetime'] = $final33value['Final']['stock_transfer_datetime'];
+			$stockOut[$final33value['Final']['serial_no']]['stock_transfer_no'] = $final33value['Final']['stock_transfer_no'];
+			$stockOut[$final33value['Final']['serial_no']]['company'] = $final33value['Final']['company'];
+			$stockOut[$final33value['Final']['serial_no']]['type'] = 2;
+			$stockOut[$final33value['Final']['serial_no']]['model'] = $final33value['Final']['model'];
+			$stockOut[$final33value['Final']['serial_no']]['serial_no'] = $final33value['Final']['serial_no'];
+		}
+// $this->log($stockOut,'stockOut');
+
 		// Sold
 		$query4 ="
 		select * from (
@@ -425,6 +552,7 @@ $this->log($deliveryQuery,'deliveryQuery');
 			    join models e on e.id = d.model_id
 				where b.from_branch_id ='{$branchId}' and a.cancel = 0
 					and a.delivery_datetime >= '{$startDate}' and a.delivery_datetime <= '{$endDate}'
+					{$d_model_checkString}
 				order by e.name asc
 		) Final
 		";

@@ -17,7 +17,7 @@ class AppController extends Controller {
 		$query = "select * from (
 			SELECT TABLE_NAME,COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT , COLUMN_KEY
 			  FROM INFORMATION_SCHEMA.COLUMNS
-			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrustlive' 
+			  WHERE table_name = '".$table_name."' AND TABLE_SCHEMA = 'citytrust_test9' 
 			  ".$notinString."
 			) TableDesc";
 		// $this->log($query,'Mainquery');

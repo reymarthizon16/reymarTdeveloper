@@ -41,25 +41,26 @@
                 <table id="tableToExport" class="table table-striped table-bordered table-hover" style="font-size:10px;">
                 	<thead class="thcenter">
                         <tr>
-                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 20px;">
+                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+6; ?>" style="text-align: center;font-size: 20px;">
                                 Inventory Report ( <?php echo $filterBranches[$this->data['branch_id']] ?> )
                             </th>
                         </tr>
                         <tr>
-                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+3; ?>" style="text-align: center;font-size: 12px;">
+                            <th colspan="<?php echo 3+count($branches)+3+count($branches)+6; ?>" style="text-align: center;font-size: 12px;">
                                 Start Date : <?php echo $this->data['start_date']; ?> &nbsp; &nbsp; &nbsp; End Date : <?php echo $this->data['end_date']; ?>        
                             </th>
                         </tr>
                 		<tr>
                 			<th colspan="2"></th>
                 			<th colspan="<?php echo count($branches)+3; ?>" >STOCK IN FROM</th>
-                			<th colspan="<?php echo count($branches)+3; ?>" >STOCK IN TO</th>
+                			<th colspan="<?php echo count($branches)+6; ?>" >STOCK IN TO</th>
                             <th></th>
                 		</tr>
                 		<tr>
                 			<th colspan="5"></th>
                 			<th colspan="<?php echo count($branches); ?>" >BRANCH</th>
-                			<th colspan="3" >Customer</th>
+                            <th colspan="4" >Customer</th>
+                			<th colspan="2" >Stock Transfer</th>
                 			<th colspan="<?php echo count($branches); ?>" >BRANCH</th>
                             <th></th>
                 		</tr>
@@ -76,7 +77,11 @@
 
                 			<th>Cash</th>
                 			<th>INSTALL</th>
-                			<th>COOP</th>
+                            <th>COOP</th>
+                			<th>REPLACEMENT</th>
+
+                            <th>SC</th>
+                            <th>Customer</th>
 
                 			<?php foreach ($branches as $brancheskey => $branchesvalue) {
                 				echo "<th>".$branchesvalue."</th>";
@@ -117,6 +122,14 @@
                                 <td ><?php echo $data['stockInToCustomer'][$models_id][3]['total']; $out += $data['stockInToCustomer'][$models_id][3]['total']; 
                                     $total['stockInToCustomer'][3] += $data['stockInToCustomer'][$models_id][3]['total'];
                                  ?></td>
+                                <td ><?php echo $data['stockInToCustomer'][$models_id][4]['total']; $out += $data['stockInToCustomer'][$models_id][4]['total']; 
+                                    $total['stockInToCustomer'][4] += $data['stockInToCustomer'][$models_id][4]['total'];
+                                 ?></td>
+
+                                <td><?php echo $data['stockInToServiceCenter'][$models_id]['total'] ; $out += $data['stockInToServiceCenter'][$models_id]['total']; $stockInToServiceCenter+=$data['stockInToServiceCenter'][$models_id]['total'];  ?> 
+                                </td> 
+                                <td><?php echo $data['stockInToCustomer'][$models_id]['total'] ; $out += $data['stockInToCustomer'][$models_id]['total']; $stockInToCustomer+=$data['stockInToCustomer'][$models_id]['total'];  ?> 
+                                </td> 
 
                                 <?php foreach ($branches as $branch_id => $branchesvalue) {
 	                				echo "<td>".$data['stockInToBranch'][$models_id][$branch_id]['total']."</td>";
@@ -139,9 +152,12 @@
                             <td><?php echo $total['stockInToCustomer'][1] ?></td>
                             <td><?php echo $total['stockInToCustomer'][2] ?></td>
                             <td><?php echo $total['stockInToCustomer'][3] ?></td>
+                            <td><?php echo $total['stockInToCustomer'][4] ?></td>
                             <?php foreach ($branches as $branch_id => $branchesvalue) {
                                 echo "<td>".$total['stockInToBranch'][$branch_id]."</td>";
                             }?>
+                            <td><?php echo $stockInToServiceCenter; ?></td>
+                            <td><?php echo $stockInToCustomer; ?></td>
                             <td><?php echo $total['ending']; ?></td>
                         </tr>
                 	</tbody>

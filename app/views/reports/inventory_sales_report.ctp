@@ -43,9 +43,10 @@
                         <tr>
                             <th>DR #</th>
                             <th>DR DATETIME</th>
-                            <th>SERIAL NO.</th>
+                            <th>NAME</th>
                             <th>MODEL</th>
-                            <th>TYPE</th>
+                            <th>SERIAL NO.</th>
+                            
                             <th>COLLECTION TYPE</th>
                             <th>PRICE</th>                            
                         </tr>
@@ -59,9 +60,10 @@
                         <tr>
                             <td><?php echo $value['Reports']['delivery_receipt_no'] ?></td>
                             <td><?php echo $value['Reports']['delivery_datetime'] ?></td>
-                            <td><?php echo $value['Reports']['serial_no'] ?></td>
+                            <td><?php echo $value['Reports']['full_name'] ?></td>
                             <td><?php echo $value['Reports']['model_name'] ?></td>
-                            <td><?php echo $value['Reports']['type_name'] ?></td>
+                            <td><?php echo $value['Reports']['serial_no'] ?></td>
+                            
                             <td><?php 
                                 echo $value['Reports']['collection_types']; 
                                 $collection_types[ $value['Reports']['collection_types'] ] += 1;
@@ -74,7 +76,8 @@
                            <td></td>
                            <td></td>
                            <td></td>
-                           <td></td>                           
+                           <td></td>
+                                                     
                            <td></td>                           
                            <td colspan="1" style="text-align: left;">
                                <?php foreach ($collection_types as $collectiontypesk => $collectiontypesv) {

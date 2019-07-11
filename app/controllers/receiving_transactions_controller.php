@@ -406,7 +406,7 @@ class ReceivingTransactionsController extends AppController {
 
 					$tmp['Storage'] = array(
 						'serial_no'=>$rtd['ReceivingTransactionDetail']['serial_no'],
-						'status'=>5,
+						'status'=>1,
 						'branch_id'=>$rtd['ReceivingTransactionDetail']['to_branch_id'],
 						'enabled' => true,
 						'entry_datetime'=>date('Y-m-d H:i:s')
@@ -418,7 +418,8 @@ class ReceivingTransactionsController extends AppController {
 						$customer_sourceAccounts = $this->getAccountCustomer();
 						$this->addItemHistory($item_exsisting['Item']['serial_no'],"Item is successfully Reposes to  ( ".$branches[$rtd['ReceivingTransactionDetail']['to_branch_id']]." ) from (".$customer_sourceAccounts[$rt['ReceivingTransaction']['source_account_id']].") using RR# of ".$rt['ReceivingTransaction']['receiving_report_no'],$rt['ReceivingTransaction']['receiving_datetime']);
 
-						$item_exsisting['Item']['status'] = 5;
+						$item_exsisting['Item']['status'] = 1;
+						$item_exsisting['Item']['is_reposes'] = 1;
 						$item_exsisting['Item']['net_price'] = $rtd['ReceivingTransactionDetail']['net_price'];
 						$item_exsisting['Item']['srp_price'] = $rtd['ReceivingTransactionDetail']['srp_price'];
 						$item_exsisting['Item']['sold_price'] = null;

@@ -88,14 +88,18 @@
                                         <td><?php echo $Svalue['net_price'] ?></td>  
                                         <?php if(isset($stockOut[$Svalue['serial_no']])){ ?>  
                                             <td><?php echo $stockOut[$Svalue['serial_no']]['stock_datetime']; ?></td>
-                                            <?php if($stockOut[$Svalue['serial_no']]['type'] ==1 ){ ?>
+                                            <?php if($stockOut[$Svalue['serial_no']]['type'] ==1 || $stockOut[$Svalue['serial_no']]['type'] ==2 ){ ?>
                                                 <td><?php echo $stockOut[$Svalue['serial_no']]['stock_transfer_no']; ?></td>
                                                 <td></td>
                                             <?php }else{ ?>
                                                 <td></td>
                                                 <td><?php echo $stockOut[$Svalue['serial_no']]['stock_transfer_no']; ?></td>
                                             <?php } ?>
-                                            <td><?php echo $stockOut[$Svalue['serial_no']]['branch']; ?></td>
+                                            <?php if($stockOut[$Svalue['serial_no']]['type'] !=2){ ?>
+                                                <td><?php echo $stockOut[$Svalue['serial_no']]['branch']; ?></td>
+                                            <?php }else{ ?>
+                                                <td><?php echo $stockOut[$Svalue['serial_no']]['company']; ?></td>
+                                            <?php } ?>
                                                 <?php $stockOut[$Svalue['serial_no']]['used'] = 1 ; ?>
                                         <?php } else{ ?>
                                             <td></td>
@@ -135,14 +139,18 @@
                                         <td><?php echo $Bvalue['net_price'] ?></td>   
                                         <?php if(isset($stockOut[$Bvalue['serial_no']]) && $stockOut[$Bvalue['serial_no']]['stock_datetime'] > $fbranchvalue['receiving_datetime']){ ?> 
                                             <td><?php echo $stockOut[$Bvalue['serial_no']]['stock_datetime']; ?></td>
-                                            <?php if($stockOut[$Bvalue['serial_no']]['type']==1){ ?>
+                                            <?php if($stockOut[$Bvalue['serial_no']]['type']==1 || $stockOut[$Bvalue['serial_no']]['type']==2){ ?>
                                                 <td><?php echo $stockOut[$Bvalue['serial_no']]['stock_transfer_no']; ?></td>
                                                 <td></td>
                                             <?php }else{ ?>
                                                 <td></td>
                                                 <td><?php echo $stockOut[$Bvalue['serial_no']]['stock_transfer_no']; ?></td>
                                             <?php } ?>
-                                            <td><?php echo $stockOut[$Bvalue['serial_no']]['branch']; ?></td>
+                                            <?php if($stockOut[$Bvalue['serial_no']]['type']!=2){ ?>
+                                                <td><?php echo $stockOut[$Bvalue['serial_no']]['branch']; ?></td>
+                                            <?php }else{ ?>
+                                                <td><?php echo $stockOut[$Bvalue['serial_no']]['company']; ?></td>
+                                            <?php } ?>
                                                <?php $stockOut[$Bvalue['serial_no']]['used'] = 1 ; ?>
                                         <?php } else{ ?>
                                             <td></td>
@@ -174,14 +182,18 @@
                                 <td ><?php echo $fprevvalue['net_price'] ?></td>    
                                  <?php if(isset($stockOut[$fprevvalue['serial']])){ ?> 
                                         <td><?php echo $stockOut[$fprevvalue['serial']]['stock_datetime']; ?></td>
-                                        <?php if($stockOut[$fprevvalue['serial']]['type']==1){ ?>
+                                        <?php if($stockOut[$fprevvalue['serial']]['type']==1 || $stockOut[$fprevvalue['serial']]['type']==2){ ?>
                                             <td><?php echo $stockOut[$fprevvalue['serial']]['stock_transfer_no']; ?></td>
                                             <td></td>
                                         <?php }else{ ?>
                                             <td></td>
                                             <td><?php echo $stockOut[$fprevvalue['serial']]['stock_transfer_no']; ?></td>
                                         <?php } ?>
-                                        <td><?php echo $stockOut[$fprevvalue['serial']]['branch']; ?></td>
+                                        <?php if($stockOut[$fprevvalue['serial']]['type']!=2){ ?>
+                                            <td><?php echo $stockOut[$fprevvalue['serial']]['branch']; ?></td>
+                                        <?php }else{ ?>
+                                            <td><?php echo $stockOut[$fprevvalue['serial']]['company']; ?></td>
+                                        <?php } ?>
                                             <?php $stockOut[$fprevvalue['serial']]['used'] = 1 ; ?>
                                     <?php } else{ ?>
                                         <td></td>
@@ -215,14 +227,18 @@
                                 <td >1</td>    
                                 <td ><?php echo $stockOutvalue['net_price'] ?></td>    
                                 <td><?php echo $stockOutvalue['stock_datetime']; ?></td>
-                                <?php if($stockOutvalue['type']==1){ ?>
+                                <?php if($stockOutvalue['type']==1 || $stockOutvalue['type']==2){ ?>
                                     <td><?php echo $stockOutvalue['stock_transfer_no']; ?></td>
                                     <td></td>
                                 <?php }else{ ?>
                                     <td></td>
                                     <td><?php echo $stockOutvalue['stock_transfer_no']; ?></td>
                                 <?php } ?>
-                                <td><?php echo $stockOutvalue['branch']; ?></td>
+                                <?php if($stockOutvalue['type']!==2){ ?>
+                                    <td><?php echo $stockOutvalue['branch']; ?></td>
+                                <?php }else{ ?>
+                                    <td><?php echo $stockOutvalue['company']; ?></td>
+                                <?php } ?>
                             </tr>
                                
                             <?php } ?>

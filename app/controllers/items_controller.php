@@ -177,6 +177,19 @@ class ItemsController extends AppController {
 		$this->render('/common/json');
 	}
 
+	function inventory_printhistory($serial_no){
+		
+		$histories=$this->ItemHistory->find('all',array('recursive'=>-1,'conditions'=>array('ItemHistory.serial_no'=>$serial_no)));
+		$data = $histories;
+		$item = $this->Item->find('first',array('conditions'=>array('Item.serial_no'=>$serial_no)));
+		$this->log($item,'item');
+		$this->set('item',$item);
+		$this->set('serial_no',$serial_no);
+		$this->set('data',$data);
+
+		$this->layout='pdf';
+	}
+
 	function inventory_add(){
 
 		if (!empty($this->data)) {
@@ -342,4 +355,43 @@ class ItemsController extends AppController {
 		$this->set('modelfieldErrors',$this->Item->validationErrors);
 
 	}
+
+	function inventory_delete($id = null){
+		$this->delete($id);
+	}
+
+	function delete($id = null) {
+		if (empty($id)) {
+			$this->Session->setFlash(__('Invalid item', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		if (!empty($id)) {
+						
+			$this->Item->query('set foreign_key_checks = 0');
+				
+				$updateSerial="delete from items where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+				$updateSerial="delete from storages where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+				$updateSerial="delete from item_histories where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+				$updateSerial="delete from receiving_transaction_details where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+				$updateSerial="delete from sold_transaction_details where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+				$updateSerial="delete from stock_transfer_transaction_details where serial_no='$id'";
+					$this->Item->query($updateSerial);
+
+			$this->Item->query('set foreign_key_checks = 1');
+
+			$this->Session->setFlash(__('The item has been deleted', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		
+	}	
 }
