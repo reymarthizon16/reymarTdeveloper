@@ -115,6 +115,24 @@ class ReportsController extends AppController {
 					join branches d on d.id = a.to_branch_id
 				where 
 					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
+					and aa.type = 4 and aa.receiving_datetime < '{$startDate}'
+					{$b_model_checkString}
+					{$bItems}
+				group by b.model_id,a.from_branch_id,b.is_reposes
+				
+			union
+
+				select 
+					#b.model_id,a.from_branch_id as branch_id,count( b.serial_no ) as total
+					b.is_reposes,b.model_id,a.to_branch_id as branch_id,'plus' as statuss ,count( b.serial_no ) as total,rand()
+				 from 
+					receiving_transaction_details a 
+					join receiving_transactions aa on a.receiving_transaction_id = aa.id
+					join items b on a.serial_no = b.serial_no 
+					join models c on c.id = b.model_id 
+					join branches d on d.id = a.to_branch_id
+				where 
+					a.confirmed = 1 and a.to_branch_id = '{$branchId}' 
 					and aa.type = 1 and aa.receiving_datetime < '{$startDate}'
 					{$b_model_checkString}
 					{$bItems}
