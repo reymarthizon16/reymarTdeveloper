@@ -194,7 +194,7 @@ class ReportsController extends AppController {
 			union
 				
 				select 
-					c.is_reposes,c.model_id,b.from_branch_id as branch_id,'minus' as statuss ,count( distinct(b.serial_no) ) as total,rand()
+					c.is_reposes,c.model_id,b.from_branch_id as branch_id,'minus' as statuss ,count( b.serial_no ) as total,rand()
 					from 
 					sold_transactions a 
 					join sold_transaction_details b on a.id = b.sold_transaction_id
